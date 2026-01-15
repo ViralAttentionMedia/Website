@@ -6,7 +6,6 @@
   <title>Viral Attention Media — Interviews • Articles • Impact</title>
   <meta name="description" content="Viral Attention Media delivers powerful interviews, in-depth articles, and stories that matter."/>
   
-  <!-- Google Fonts - Modern & Professional -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -46,7 +45,6 @@
       z-index: 100;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      transition: background 0.4s, border 0.4s;
     }
     nav {
       max-width: 1400px;
@@ -180,7 +178,7 @@
     }
     
     @media (max-width: 768px) {
-      .nav-links { display: none; } /* → you can add hamburger later */
+      .nav-links { display: none; }
       .hero { padding: 8rem 5% 6rem; }
     }
   </style>
@@ -212,7 +210,6 @@
     <section id="interviews">
       <h2 class="section-title">Latest Interviews</h2>
       <div class="content-grid">
-        <!-- Example card - replace image srcs with your own (use placeholder or upload later) -->
         <article class="card">
           <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800" alt="Interview thumbnail" class="card-img">
           <div class="card-body">
@@ -245,7 +242,18 @@
     <section id="articles">
       <h2 class="section-title">Featured Articles</h2>
       <div class="content-grid">
-        <!-- Add more cards here in the same format -->
+
+        <!-- Your new article card - appears first -->
+        <article class="card">
+          <img src="IMG_00006.jpeg" alt="Sheep Jersey - Critique of Modern Sports" class="card-img">
+          <div class="card-body">
+            <div class="category">ARTICLE</div>
+            <h3><a href="articles/rotten-underbelly-modern-sports.html">The Rotten Underbelly of Modern Sports: A Harsh Critique</a></h3>
+            <p class="meta">Jan 15, 2026 • ~8 min read</p>
+          </div>
+        </article>
+
+        <!-- Original placeholder kept below it -->
         <article class="card">
           <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800" alt="Article thumbnail" class="card-img">
           <div class="card-body">
@@ -255,7 +263,6 @@
           </div>
         </article>
 
-        <!-- Duplicate / add your real content here -->
       </div>
     </section>
   </main>
@@ -269,11 +276,9 @@
   </footer>
 
   <script>
-    // Simple dark mode toggle
     const toggle = document.querySelector('.theme-toggle');
     const html = document.documentElement;
 
-    // Check for saved preference or system preference
     if (localStorage.getItem('theme') === 'dark' ||
         (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       html.setAttribute('data-theme', 'dark');
