@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Viral Attention Media</title>
+  <meta name="description" content="Viral Attention Media: Unfiltered stories, sharp analysis, and journalism that cuts through the noise."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --text-muted: #555555;
+      --primary: #0066ff;
+      --primary-dark: #0044cc;
+      --border: #e5e5e5;
+    }
+    [data-theme="dark"] {
+      --bg: #0f0f0f;
+      --text: #f0f0f0;
+      --text-muted: #aaaaaa;
+      --primary: #4d9aff;
+      --primary-dark: #2e7aff;
+      --border: #333333;
+    }
+    
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.4s, color 0.4s;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1.1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-links a {
+      margin-left: 2.2rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    
+    main { padding-top: 9rem; max-width: 900px; margin: 0 auto; padding: 4rem 5% 6rem; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+    p, li {
+      font-size: 1.125rem;
+      margin-bottom: 1.6rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    strong {
+      color: var(--text);
+    }
+    .section {
+      margin-bottom: 4rem;
+    }
+    .cta {
+      display: inline-block;
+      padding: 1rem 2.3rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.25s;
+      margin-top: 2rem;
+    }
+    .cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 4rem 5% 2.5rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="/" class="logo">Viral Attention</a>
+      
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#interviews">Interviews</a>
+        <a href="/#articles">Articles</a>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+      </div>
+      
+      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Viral Attention Media</h1>
+
+    <div class="section">
+      <p>We started Viral Attention Media because the mainstream media machine has become too comfortable — too polished, too safe, too afraid to call things what they are.</p>
+      
+      <p>Our mission is simple: cut through the noise. We deliver unfiltered interviews, unflinching analysis, and stories that actually matter — no corporate leash, no advertiser-friendly edits, no sacred cows.</p>
+    </div>
+
+    <div class="section">
+      <h2>What We Believe</h2>
+      <ul>
+        <li><strong>Attention is the new currency</strong> — and we refuse to waste yours on fluff or spin.</li>
+        <li>Journalism should provoke, not pacify. Comfort is the enemy of truth.</li>
+        <li>Power must be questioned, not protected. We name names and follow the money.</li>
+        <li>Fans, athletes, and citizens deserve honesty — not manufactured narratives.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>What We Cover</h2>
+      <p>Hard-hitting interviews with people who matter. Deep dives into sports, culture, politics, and power. Exposés on corruption, exploitation, and the systems that keep people quiet. Stories that make you think, argue, and maybe even change your mind.</p>
+      
+      <p>We don't do press releases. We don't do safe takes. We do real journalism in an age that desperately needs it.</p>
+    </div>
+
+    <div class="section">
+      <h2>Who We Are</h2>
+      <p>Viral Attention Media is an independent outlet founded in 2026 in Phoenix, Arizona. We operate without corporate backing, billionaire investors, or legacy media baggage. Our only obligation is to the truth — and to you, the reader who still cares enough to pay attention.</p>
+    </div>
+
+    <a href="/" class="cta">Back to Stories</a>
+  </main>
+
+  <footer>
+    <p>© 2026 Viral Attention Media. All rights reserved.</p>
+    <p style="margin-top:0.6rem;">
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.setAttribute('data-theme', 'dark');
+      toggle.textContent = '🌙';
+    }
+
+    toggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '☀️';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>
