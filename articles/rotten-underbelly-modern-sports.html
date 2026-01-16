@@ -29,41 +29,13 @@
       --border: #333333;
       --card-bg: #1a1a1a;
     }
-    .article-header h1 {
-  text-align: left;  /* or keep center if you love it, but left is more pro */
-  margin-bottom: 0.5rem;
-}
-.meta {
-  text-align: left;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-.article-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 5% 4rem;
-  font-size: 1.1rem;  /* slightly larger for readability */
-  line-height: 1.7;   /* more breathing room */
-}
-.article-content p {
-  margin-bottom: 1.5rem;  /* generous paragraph spacing */
-}
-.article-content h2 {
-  margin: 3rem 0 1rem;  /* bigger gap before sections */
-  font-size: 2.2rem;
-}
-.back-link {
-  display: block;
-  text-align: left;  /* left instead of center */
-  margin: 3rem 0 1rem;
-}
     
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       transition: background 0.4s, color 0.4s;
     }
     header {
@@ -108,22 +80,25 @@
     main { padding-top: 9rem; }
     .article-header {
       text-align: center;
-      padding: 6rem 5% 3rem;
+      padding: 6rem 5% 4rem;
       background: linear-gradient(135deg, rgba(0,102,255,0.07) 0%, transparent 60%);
     }
     .article-header h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.8rem, 6vw, 4.5rem);
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
     .meta {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--text-muted);
+      margin-bottom: 3rem;
     }
     .article-content {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 5% 4rem;
+      padding: 0 5% 6rem;
+      font-size: 1.125rem; /* larger, more readable */
+      line-height: 1.8;
     }
     .article-content img.article-img {
       width: 100%;
@@ -131,18 +106,26 @@
       max-height: 500px;
       object-fit: cover;
       border-radius: 12px;
-      margin: 2rem 0;
+      margin: 0 0 3rem;
     }
-    .article-content h2, .article-content h3 {
+    .article-content p {
+      margin-bottom: 1.6rem;
+    }
+    .article-content h2 {
       font-family: 'Playfair Display', serif;
-      margin: 2rem 0 1rem;
+      font-size: 2.2rem;
+      margin: 4rem 0 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
     }
     .back-link {
-      display: inline-block;
-      margin: 2rem 0;
+      display: block;
+      text-align: left;
+      margin: 4rem 0 2rem;
       color: var(--primary);
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.1rem;
     }
     .back-link:hover { text-decoration: underline; }
     
@@ -174,87 +157,28 @@
 
   <main>
     <section class="article-header">
+      <h1>The Rotten Underbelly of Modern Sports: Where Glory Ends and Exploitation Begins</h1>
+      <p class="meta">Viral Attention Media • January 15, 2026 • 8–10 min read</p>
+    </section>
+
+    <div class="article-content">
       <!-- Featured image - sheep jersey -->
-<img src="/IMG_0006.jpeg" alt="Sheep Jersey - Symbol of Blind Fandom in Modern Sports" class="article-<!-- Featured image (keep or add this if not already present) -->
-<img src="/IMG_00006.jpeg" alt="Sheep Jersey - Symbol of Blind Fandom in Modern Sports" class="article-img">
+      <img src="/IMG_00006.jpeg" alt="Sheep Jersey - Symbol of Blind Fandom in Modern Sports" class="article-img">
 
-<p class="meta">Viral Attention Media • January 15, 2026 • 8–10 min read</p>
+      <p><strong>Modern sports aren't a game anymore.</strong><br>
+      They're a predatory empire that grinds up athletes, addicts fans, and laughs while you wear another man's name on your back like a branded sheep.</p>
 
-<p><strong>Modern sports aren't a game anymore.</strong><br>
-They're a predatory empire that grinds up athletes, addicts fans, and laughs while you wear another man's name on your back like a branded sheep.</p>
+      <p>The multi-billion-dollar machine sells you fake loyalty while exploiting everyone involved — and most fans are too busy cheering strangers to notice.</p>
 
-<p>The multi-billion-dollar machine sells you fake loyalty while exploiting everyone involved — and most fans are too busy cheering strangers to notice.</p>
+      <h2>1. Commercialization: The Sport Is Dead, the Product Lives</h2>
+      <p>Rules bend for ratings, schedules twist for streaming cash, every timeout is a sales pitch. The NBA adds pointless tournaments, the NFL plays Thursdays despite injury spikes, F1 races in Saudi for oil money.</p>
 
-<h2>1. Commercialization: The Sport Is Dead, the Product Lives</h2>
-<p>Rules bend for ratings, schedules twist for streaming cash, every timeout is a sales pitch. The NBA adds pointless tournaments, the NFL plays Thursdays despite injury spikes, F1 races in Saudi for oil money.</p>
+      <p>Athletes are billboards. The game? Just the bait.</p>
 
-<p>Athletes are billboards. The game? Just the bait.</p>
+      <h2>2. Athlete Exploitation: Meat on the Field</h2>
+      <p>Kids scouted at 12, pushed to breaking point, discarded when injured. Mental health ignored until public collapse (Biles, Osaka, Love). Contracts rigged for owners — speak out, get blackballed.</p>
 
-<h2>2. Athlete Exploitation: Meat on the Field</h2>
-<p>Kids scouted at 12, pushed to breaking point, discarded when injured. Mental health ignored until public collapse (Biles, Osaka, Love). Contracts rigged for owners — speak out, get blackballed.</p>
+      <h2>3. Predatory Sports Betting: The New Rigged Casino</h2>
+      <p>Leagues partner with DraftKings, FanDuel, BetMGM — turning broadcasts into gambling ads. In-game bets, parlays, props — engineered addiction.</p>
 
-<h2>3. Predatory Sports Betting: The New Rigged Casino</h2>
-<p>Leagues partner with DraftKings, FanDuel, BetMGM — turning broadcasts into gambling ads. In-game bets, parlays, props — engineered addiction.</p>
-
-<p>Coaches and players know the lines. They know when to "rest" a star, run clock, call timeouts. Subtle influence swings millions in bets without leaving fingerprints. Integrity? Sold for sponsorship dollars.</p>
-
-<p>Fans lose homes chasing the high. The league counts the revenue and calls it "engagement."</p>
-
-<h2>4. Corruption: The System Protects the Powerful</h2>
-<p>FIFA scandals, NBA referee probes, Olympic doping cover-ups, NFL concussion fights. Billionaire owners and commissioners face no real accountability.</p>
-
-<p>Fines are pocket change. Suspensions are theater.</p>
-
-<h2>5. Fans as Sheep: Cheering Complete Strangers in Another Man's Name</h2>
-<p>Here's the brutal truth: the majority of a team's players didn't grow up near the city, have no family ties, no real affiliation. They were drafted, traded, or signed for money — complete strangers wearing the jersey.</p>
-
-<p>Yet grown men spend hundreds on overpriced replicas with another man's name stitched across their backs, screaming loyalty to a group of mercenaries who might leave tomorrow.</p>
-
-<p>You're not supporting your hometown. You're wearing a stranger's name like a badge of submission. The sheep jersey says it all: blind, obedient, paying to be fleeced.</p>
-
-<p>You defend billionaires, buy the merch, fund the exploitation — all for arbitrary allegiance to people who don't know you exist.</p>
-
-<h2>Conclusion: Wake Up or Stay Fleeced</h2>
-<p>Sports could be raw, unifying, real. But that requires dismantling the machine: fair pay, real integrity, betting separation, and fans who stop acting like branded cattle cheering strangers.</p>
-
-<p>Until then, athletes break, gamblers lose everything, and grown men keep wearing another man's name like it's an honor.</p>
-
-<p>Stop being the sheep. Demand better — or admit you're part of the flock.</p>
-
-<a href="/" class="back-link">← Back to Home</a>
-      <a href="/" class="back-link">← Back to Home</a>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2026 Viral Attention Media. All rights reserved.</p>
-    <p style="margin-top:0.6rem;">
-      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
-      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
-    </p>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.theme-toggle');
-    const html = document.documentElement;
-
-    if (localStorage.getItem('theme') === 'dark' ||
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.setAttribute('data-theme', 'dark');
-      toggle.textContent = '🌙';
-    }
-
-    toggle.addEventListener('click', () => {
-      if (html.getAttribute('data-theme') === 'dark') {
-        html.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        toggle.textContent = '☀️';
-      } else {
-        html.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        toggle.textContent = '🌙';
-      }
-    });
-  </script>
-</body>
-</html>
+      <p>Coaches and players know the lines. They know when to
