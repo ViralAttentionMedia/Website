@@ -202,4 +202,81 @@
       <p>This isn’t accidental. It’s engineered.</p>
 
       <h2>Profit from Desperation Is the Real Business Model</h2>
-      <p>Banks have known for decades that overdraft fees disproportionately
+      <p>Banks have known for decades that overdraft fees disproportionately affect low-income households, people of color, young adults, and military families. A 2023 CFPB report found that the <strong>bottom 25% of income earners paid 74% of all overdraft fees</strong>. The people least able to afford a $35 penalty are the ones most likely to be charged it—repeatedly.</p>
+
+      <p>In the early 2000s, overdraft fees were modest and rare. Then banks realized something: if they <strong>reordered transactions</strong> (processing the largest charges first), they could maximize the number of overdrafts per customer. A $200 grocery run followed by a $5 ATM withdrawal suddenly becomes five $35 fees instead of one.</p>
+
+      <p>The practice was so blatantly predatory that the CFPB finally banned it in 2010… but only partially. Banks still reorder in many cases, and the fee amounts have only gone up.</p>
+
+      <h2>Real People, Real Destruction</h2>
+      <p>Meet Maria, a 32-year-old single mother in Phoenix. She had $12 in her account when her son’s daycare unexpectedly charged her $18 for a late pickup fee. The bank processed the daycare charge first, then hit her with four more transactions (gas, groceries, phone bill) — all overdrawn. Total cost: <strong>$140 in fees</strong> on top of the $18.</p>
+
+      <p>She was already living paycheck to paycheck.<br>
+      Now she’s two weeks behind on rent.</p>
+
+      <p>This isn’t an isolated story. It’s the norm.</p>
+
+      <p>The CFPB estimates that <strong>one in nine</strong> overdraft users end up paying more than $500 a year in fees—more than many people spend on groceries. For someone making minimum wage, that’s not an inconvenience. It’s a catastrophe.</p>
+
+      <h2>The Banks’ Defense: “It’s a Service”</h2>
+      <p>When pressed, banks trot out the same tired line: overdraft protection is a <strong>convenience</strong> for customers who “choose” to spend more than they have.</p>
+
+      <p>Except most people don’t choose to overdraw by $4 on purpose. They simply don’t have perfect visibility into every pending charge, automatic payment, or debit card hold. And banks know this. They design their apps and alerts to be just confusing enough that mistakes happen frequently—and profitably.</p>
+
+      <p>In fact, many banks now offer “opt-in” overdraft protection programs… but they make opting out deliberately difficult, bury the settings in menus, or simply enroll customers automatically unless they explicitly fight it.</p>
+
+      <p>That’s not convenience.<br>
+      That’s coercion.</p>
+
+      <h2>The Fix Is Simple (And Banks Hate It)</h2>
+      <p>The Consumer Financial Protection Bureau proposed a rule in 2024 that would <strong>cap overdraft fees at the bank’s actual cost</strong> (usually $3–$5 per transaction). Banks screamed bloody murder, claiming it would destroy their business model.</p>
+
+      <p>Exactly.</p>
+
+      <p>If banks can’t make billions by kicking people when they’re down, they’ll have to find revenue somewhere else—like actually competing for customers with better products, lower fees, and real customer service.</p>
+
+      <p>Until then, the current system is nothing short of <strong>institutional bullying</strong>: the most powerful financial institutions in the world systematically extracting money from the people who can least afford to lose it.</p>
+
+      <p>So next time your bank charges you $35 for being $3 overdrawn, remember:</p>
+
+      <p>They’re not protecting you.<br>
+      They’re preying on you.</p>
+
+      <p>And they’re laughing all the way to… well, their own vault.</p>
+
+      <a href="/" class="back-link">← Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Viral Attention Media. All rights reserved.</p>
+    <p style="margin-top:0.6rem;">
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.setAttribute('data-theme', 'dark');
+      toggle.textContent = '🌙';
+    }
+
+    toggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '☀️';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>
