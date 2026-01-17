@@ -54,16 +54,24 @@
       justify-content: space-between;
       align-items: center;
     }
-    .logo {
-      font-family: 'Inter', system-ui, sans-serif;
-      font-weight: 900;
-      font-size: 1.8rem;          /* Smaller to fit on one line */
-      letter-spacing: -0.04em;    /* Tighter for compactness */
-      color: #00ffff;
-      text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
-      text-decoration: none;
-      white-space: nowrap;        /* Forces single line */
-    }
+.logo {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+  color: #00ffff;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;  /* Strong black outline in all directions */
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
     .nav-links a {
       margin-left: 1.8rem;
       color: var(--text);
