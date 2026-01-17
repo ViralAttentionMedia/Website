@@ -49,7 +49,7 @@
     nav {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 1.1rem 5%;
+      padding: 1rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -77,10 +77,12 @@
       color: var(--text-muted);
     }
     
-    main { padding-top: 9rem; }
+    main {
+      padding-top: 7rem; /* Reduced top padding to start content closer to header */
+    }
     .article-header {
       text-align: center;
-      padding: 6rem 5% 4rem;
+      padding: 5rem 5% 2.5rem; /* Tightened top padding, reduced bottom for cleaner flow */
       background: linear-gradient(135deg, rgba(0,102,255,0.07) 0%, transparent 60%);
     }
     .article-header h1 {
@@ -91,13 +93,13 @@
     .meta {
       font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 3rem;
+      margin-bottom: 2rem; /* Controlled space before image */
     }
     .article-content {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 5% 6rem;
-      font-size: 1.125rem; /* larger, more readable */
+      font-size: 1.125rem;
       line-height: 1.8;
     }
     .article-content img.article-img {
@@ -106,7 +108,10 @@
       max-height: 500px;
       object-fit: cover;
       border-radius: 12px;
-      margin: 0 0 3rem;
+      margin: 1rem 0 3.5rem; /* Tight top, generous bottom gap */
+    }
+    .article-content p:first-of-type {
+      margin-top: 0;
     }
     .article-content p {
       margin-bottom: 1.6rem;
@@ -145,7 +150,6 @@
       
       <div class="nav-links">
         <a href="/">Home</a>
-        
       </div>
       
       <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
@@ -159,7 +163,6 @@
     </section>
 
     <div class="article-content">
-      <!-- Featured image - sheep jersey -->
       <img src="/IMG_0006.jpeg" alt="Sheep Jersey - Symbol of Blind Fandom in Modern Sports" class="article-img">
 
       <p><strong>Modern sports aren't a game anymore.</strong><br>
