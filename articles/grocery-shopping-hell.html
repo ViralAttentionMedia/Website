@@ -1,159 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHY THE HELL IS GROCERY SHOPPING NOW A COMPLETE NIGHTMARE?</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #c0392b;
-            font-size: 2.8em;
-            margin-bottom: 0.3em;
-            line-height: 1.2;
-        }
-        .intro {
-            font-size: 1.25em;
-            font-weight: 500;
-            margin: 2em 0;
-            color: #444;
-        }
-        .grocery-rant {
-            font-size: 1.3em;
-            font-style: italic;
-            color: #8b0000;
-            background-color: #fff5f5;
-            padding: 20px;
-            border-left: 5px solid #c0392b;
-            margin: 1.5em 0;
-            border-radius: 4px;
-        }
-        .featured-image-container {
-            text-align: center;
-            margin: 30px 0 50px;
-        }
-        .featured-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            border: 1px solid #ddd;
-        }
-        h2 {
-            color: #b22222;
-            font-size: 2.1em;
-            margin-top: 2em;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.3em;
-        }
-        p {
-            margin-bottom: 1.4em;
-            font-size: 1.1em;
-        }
-        strong {
-            color: #000;
-        }
-        ul {
-            margin: 1.2em 0;
-            padding-left: 2em;
-        }
-        li {
-            margin-bottom: 0.8em;
-            font-size: 1.1em;
-        }
-        footer {
-            margin-top: 4em;
-            text-align: center;
-            color: #777;
-            font-size: 0.9em;
-            border-top: 1px solid #ddd;
-            padding-top: 2em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WHY THE HELL IS GROCERY SHOPPING NOW A COMPLETE NIGHTMARE? — Viral Attention Media</title>
+  <meta name="description" content="Shrinkflation, corporate greed, and inconsiderate shoppers have turned grocery shopping into a nightmare in 2026."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --text-muted: #555555;
+      --primary: #0066ff;
+      --primary-dark: #0044cc;
+      --border: #e5e5e5;
+    }
+    [data-theme="dark"] {
+      --bg: #0f0f0f;
+      --text: #f0f0f0;
+      --text-muted: #aaaaaa;
+      --primary: #4d9aff;
+      --primary-dark: #2e7aff;
+      --border: #333333;
+    }
+    
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      transition: background 0.4s, color 0.4s;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.9rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.6rem, 4.5vw, 2rem);
+      letter-spacing: -0.03em;
+      color: #00ffff;
+      text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.3s;
+    }
+    .logo:hover {
+      transform: scale(1.03);
+    }
+    .nav-links a {
+      margin-left: 1.6rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    
+    main {
+      padding-top: 9rem;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem 5% 6rem;
+    }
+    .article-header {
+      text-align: center;
+      padding: 6rem 5% 2rem;
+      background: linear-gradient(135deg, rgba(0,102,255,0.07) 0%, transparent 60%);
+    }
+    .article-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+      color: #c0392b;
+    }
+    .meta {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .article-content {
+      font-size: 1.125rem;
+      line-height: 1.8;
+    }
+    .article-img-container {
+      margin: 1.5rem 0 4rem;
+      text-align: center;
+    }
+    .article-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .article-img:hover {
+      transform: scale(1.02);
+    }
+    .article-content p {
+      margin-bottom: 1.6rem;
+    }
+    .article-content p:first-of-type {
+      margin-top: 0;
+    }
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      margin: 3.5rem 0 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+      color: #b22222;
+    }
+    .grocery-rant {
+      font-size: 1.3em;
+      font-style: italic;
+      color: #c0392b;
+      background-color: #fff5f5;
+      padding: 20px;
+      border-left: 5px solid #c0392b;
+      margin: 2em 0;
+      border-radius: 4px;
+      line-height: 1.5;
+    }
+    .back-link {
+      display: block;
+      margin: 4rem 0 2rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    
+    footer {
+      text-align: center;
+      padding: 4rem 5% 2.5rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>WHY THE HELL IS GROCERY SHOPPING NOW A COMPLETE NIGHTMARE?<br>YOU’RE GETTING ROBBED BLIND AND SCREWED OVER – AND IT’S ONLY GETTING WORSE IN 2026!</h1>
-    </header>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="/" class="logo">Viral Attention Media</a>
+      
+      <div class="nav-links">
+        <a href="/">Home</a>
+      </div>
+      
+      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+    </nav>
+  </header>
 
-    <div class="featured-image-container">
-        <img src="IMG_0035.jpeg" alt="Frustrated grocery shopper" class="featured-image">
+  <main>
+    <section class="article-header">
+      <h1>WHY THE HELL IS GROCERY SHOPPING NOW A COMPLETE NIGHTMARE?</h1>
+      <p class="meta">Viral Attention Media • January 19, 2026 • 7 min read</p>
+    </section>
+
+    <div class="article-img-container">
+      <img 
+        src="/IMG_0035.jpeg" 
+        alt="Frustrated grocery shopper" 
+        class="article-img"
+        loading="lazy"
+        onclick="window.open(this.src, '_blank');"
+      >
     </div>
 
-    <p class="intro">Let’s cut the bullshit: Grocery shopping isn’t just annoying anymore—it’s a full-blown rage-inducing scam designed to piss you off, drain your wallet, and make you question your life choices every damn time you step inside a store. In 2026, the weekly trip has become a war zone of shrinkflation, greedy corporate vultures, and selfish assholes who act like the aisles belong to them.</p>
+    <div class="article-content">
+      <p>Let’s cut the bullshit: Grocery shopping isn’t just annoying anymore—it’s a full-blown rage-inducing scam designed to piss you off, drain your wallet, and make you question your life choices every damn time you step inside a store. In 2026, the weekly trip has become a war zone of shrinkflation, greedy corporate vultures, and selfish assholes who act like the aisles belong to them.</p>
 
-    <div class="grocery-rant">
+      <div class="grocery-rant">
         “I pick up my grocery item the first time to put it in the cart. I pick it up the second time to check out. A third time to load it into my vehicle. A fourth time to bring it in the house. A 5th time to put it away. A sixth time to prepare it. And a 7th time to eat it. By the time I take the first bite, I am already annoyed by it.”
-    </div>
+      </div>
 
-    <p class="intro">Here’s exactly why you feel like punching something after every checkout.</p>
+      <p>Here’s exactly why you feel like punching something after every checkout.</p>
 
-    <h2>Shrinkflation: They’re Literally Stealing Food Out of Your Cart</h2>
-    <p>You’re not imagining it—your groceries are shrinking right in front of your eyes while the price tag stays the same or climbs higher. Companies call it “shrinkflation.” We call it theft.</p>
+      <h2>Shrinkflation: They’re Literally Stealing Food Out of Your Cart</h2>
+      <p>You’re not imagining it—your groceries are shrinking right in front of your eyes while the price tag stays the same or climbs higher. Companies call it “shrinkflation.” We call it theft.</p>
 
-    <p>Recent 2025–2026 data shows some of the most shameless examples yet:</p>
+      <p>Recent 2025–2026 data shows some of the most shameless examples yet:</p>
 
-    <ul>
+      <ul>
         <li>Powdered drink packets: down <strong>50%</strong> in count</li>
         <li>Cupcakes: <strong>36.71%</strong> lighter (3.41 oz gone)</li>
         <li>Liquid laundry detergent: <strong>20.55%</strong> smaller (15 fl oz vanished)</li>
         <li>Chocolate bars: nearly <strong>20%</strong> smaller (1.06 oz less)</li>
         <li>Cereal boxes: average <strong>19.64%</strong> reduction (2.2 oz missing per box)</li>
-    </ul>
+      </ul>
 
-    <p>Even “health” products aren’t safe. Heartburn medicine bottles shrank from 600ml to 500ml (20% less for the same price). Toothpaste tubes dropped from 100ml to 75ml. Nescafé coffee jars lost 5% of their weight overnight. Family-size juice bottles? Down from 52oz to 46oz. Frosted Flakes family packs? Slashed to 21.7oz—a straight-up <strong>40%</strong> price-per-ounce gouge.</p>
+      <p>Even “health” products aren’t safe. Heartburn medicine bottles shrank from 600ml to 500ml (20% less for the same price). Toothpaste tubes dropped from 100ml to 75ml. Nescafé coffee jars lost 5% of their weight overnight. Family-size juice bottles? Down from 52oz to 46oz. Frosted Flakes family packs? Slashed to 21.7oz—a straight-up <strong>40%</strong> price-per-ounce gouge.</p>
 
-    <p>A U.S. Government Accountability Office report confirmed that between 2019 and 2024 (with the trend exploding into 2025–2026), downsized products delivered per-unit price increases of 12% (paper towels) to 32% (coffee). Surveys show 78% of shoppers caught shrinkflation in snacks, 53% in desserts, and 48% in frozen foods. Families with kids notice it everywhere.</p>
+      <p>A U.S. Government Accountability Office report confirmed that between 2019 and 2024 (with the trend exploding into 2025–2026), downsized products delivered per-unit price increases of 12% (paper towels) to 32% (coffee). Surveys show 78% of shoppers caught shrinkflation in snacks, 53% in desserts, and 48% in frozen foods. Families with kids notice it everywhere.</p>
 
-    <p>They’re banking on you not reading the fine print. You’re paying more for less—every single week. That’s not inflation. That’s robbery.</p>
+      <p>They’re banking on you not reading the fine print. You’re paying more for less—every single week. That’s not inflation. That’s robbery.</p>
 
-    <h2>Private Equity Scumbags Are Turning Supermarkets Into Cash Machines</h2>
-    <p>Behind the scenes, private equity firms have turned your neighborhood grocery store into their personal piggy bank. They buy chains, load them with crushing debt, strip them for parts, pay themselves fat dividends, and leave you with higher prices, dirtier stores, and empty shelves.</p>
+      <h2>Private Equity Scumbags Are Turning Supermarkets Into Cash Machines</h2>
+      <p>Behind the scenes, private equity firms have turned your neighborhood grocery store into their personal piggy bank. They buy chains, load them with crushing debt, strip them for parts, pay themselves fat dividends, and leave you with higher prices, dirtier stores, and empty shelves.</p>
 
-    <p>Albertsons? Gobbled up by Cerberus Capital Management in deals that made it the second-largest U.S. chain—while stores deteriorated. Southeastern Grocers (Lone Star Funds), The Fresh Market (Apollo), Tops Markets—all plagued by underinvestment, bankruptcies, and price hikes. The classic private equity playbook: 70% debt financing, asset sales, executive payouts, and zero care for customers or employees.</p>
+      <p>Albertsons? Gobbled up by Cerberus Capital Management in deals that made it the second-largest U.S. chain—while stores deteriorated. Southeastern Grocers (Lone Star Funds), The Fresh Market (Apollo), Tops Markets—all plagued by underinvestment, bankruptcies, and price hikes. The classic private equity playbook: 70% debt financing, asset sales, executive payouts, and zero care for customers or employees.</p>
 
-    <p>The Kroger-Albertsons merger drama (ultimately blocked) exposed a $4 billion dividend payout to private equity owners while critics screamed about inevitable price increases and store closures. These firms aren’t in the grocery business—they’re in the profit-extraction business. Your higher bills are literally paying for their yachts.</p>
+      <p>The Kroger-Albertsons merger drama (ultimately blocked) exposed a $4 billion dividend payout to private equity owners while critics screamed about inevitable price increases and store closures. These firms aren’t in the grocery business—they’re in the profit-extraction business. Your higher bills are literally paying for their yachts.</p>
 
-    <h2>Inconsiderate Assholes Are Making the Store a Living Hell</h2>
-    <p>Even if the prices weren’t criminal and the packages weren’t shrinking, the other shoppers would still make you want to scream.</p>
+      <h2>Inconsiderate Assholes Are Making the Store a Living Hell</h2>
+      <p>Even if the prices weren’t criminal and the packages weren’t shrinking, the other shoppers would still make you want to scream.</p>
 
-    <p>They block entire aisles debating yogurt flavors for 15 minutes.<br>
-    They park carts in the middle of walkways like it’s their living room.<br>
-    They abandon unwanted items in random spots instead of putting them back.<br>
-    They let their kids run wild, turning the store into a playground obstacle course.<br>
-    They park like maniacs, steal spots, nearly hit pedestrians, and leave carts blocking traffic lanes.<br>
-    They talk on speakerphone at checkout, slowing every line.<br>
-    They snack while shopping, leaving crumbs and wrappers everywhere.</p>
+      <p>They block entire aisles debating yogurt flavors for 15 minutes.<br>
+      They park carts in the middle of walkways like it’s their living room.<br>
+      They abandon unwanted items in random spots instead of putting them back.<br>
+      They let their kids run wild, turning the store into a playground obstacle course.<br>
+      They park like maniacs, steal spots, nearly hit pedestrians, and leave carts blocking traffic lanes.<br>
+      They talk on speakerphone at checkout, slowing every line.<br>
+      They snack while shopping, leaving crumbs and wrappers everywhere.</p>
 
-    <p>A recent poll found nearly half of shoppers have almost been hit by cars in grocery store parking lots because of rude, entitled drivers. Inside, the entitlement never stops. These people treat the store like their personal kingdom—and everyone else is just in their way.</p>
+      <p>A recent poll found nearly half of shoppers have almost been hit by cars in grocery store parking lots because of rude, entitled drivers. Inside, the entitlement never stops. These people treat the store like their personal kingdom—and everyone else is just in their way.</p>
 
-    <h2>The Brutal Truth</h2>
-    <p>Grocery shopping in 2026 is a perfect storm of corporate greed, sneaky shrinkflation, private equity parasites, and selfish jerks who make every trip feel like a fight for survival. You’re getting less food for more money, stores are getting worse, and the people around you are making it unbearable.</p>
+      <h2>The Brutal Truth</h2>
+      <p>Grocery shopping in 2026 is a perfect storm of corporate greed, sneaky shrinkflation, private equity parasites, and selfish jerks who make every trip feel like a fight for survival. You’re getting less food for more money, stores are getting worse, and the people around you are making it unbearable.</p>
 
-    <p>No wonder so many people are ditching in-person shopping for delivery, pickup, or farmers’ markets—anything to avoid the rage.</p>
+      <p>No wonder so many people are ditching in-person shopping for delivery, pickup, or farmers’ markets—anything to avoid the rage.</p>
 
-    <p><strong>You’re not overreacting.</strong><br>
-    <strong>You’re not alone.</strong><br>
-    The grocery store experience really has become this infuriating.</p>
+      <p><strong>You’re not overreacting.</strong><br>
+      <strong>You’re not alone.</strong><br>
+      The grocery store experience really has become this infuriating.</p>
 
-    <p>And until something changes, every trip is going to feel like a slap in the face.</p>
+      <p>And until something changes, every trip is going to feel like a slap in the face.</p>
 
-    <footer>
-        <p>© 2026 Viral Attention | All rights reserved</p>
-    </footer>
+      <a href="/" class="back-link">← Back to Home</a>
+    </div>
+  </main>
 
+  <footer>
+    <p>© 2026 Viral Attention Media. All rights reserved.</p>
+    <p style="margin-top:0.6rem;">
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.setAttribute('data-theme', 'dark');
+      toggle.textContent = '🌙';
+    }
+
+    toggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '☀️';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '🌙';
+      }
+    });
+  </script>
 </body>
 </html>
