@@ -37,6 +37,7 @@
       color: var(--text);
       line-height: 1.6;
       transition: background 0.4s, color 0.4s;
+      scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
     }
     header {
       position: fixed;
@@ -137,6 +138,7 @@
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0,255,255,0.6);
       transition: all 0.3s;
+      cursor: pointer;
     }
     .cta-btn:hover {
       transform: translateY(-4px) scale(1.05);
@@ -247,7 +249,7 @@
     <section class="hero">
       <h1>Stories That Cut Through the Noise</h1>
       <p>Viral Attention Media delivers unfiltered interviews, sharp analysis, and stories built to spark attention and drive conversation.</p>
-      <a href="articles/grocery-shopping-hell.html" class="cta-btn">Explore Latest Content</a>
+      <a href="#articles" class="cta-btn">Explore Latest Content</a>
     </section>
 
     <section id="articles">
