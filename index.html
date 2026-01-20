@@ -37,7 +37,7 @@
       color: var(--text);
       line-height: 1.6;
       transition: background 0.4s, color 0.4s;
-      scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+      scroll-behavior: smooth;
     }
     header {
       position: fixed;
@@ -211,12 +211,11 @@
       margin-top: 1.2rem;
     }
     
-    footer {
-      text-align: center;
-      padding: 4rem 5% 2.5rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-      margin-top: 6rem;
+    /* Improved placeholder card styling for IMG_0039.jpeg */
+    .placeholder-card .card-img {
+      height: 320px;
+      object-fit: cover;           /* Default: cover (fills the area) */
+      object-position: center;
     }
     
     @media (max-width: 768px) {
@@ -224,7 +223,24 @@
       .hero { padding: 10rem 5% 12rem; }
       .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .logo { font-size: 1.6rem; }
-      .card-img { height: 280px; }
+      
+      .card-img {
+        height: 240px;             /* Smaller height on mobile */
+      }
+      
+      /* Make IMG_0039 look better on phones - switch to contain so text is visible */
+      .placeholder-card .card-img {
+        height: 260px;
+        object-fit: contain;       /* Changed to contain on mobile */
+        background: var(--card-bg);
+        padding: 10px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .placeholder-card .card-img {
+        height: 220px;
+      }
     }
   </style>
 </head>
@@ -256,7 +272,7 @@
       <h2 class="section-title">Featured Articles</h2>
       <div class="content-grid">
 
-        <!-- NEW GROCERY ARTICLE - FULLY CLICKABLE CARD -->
+        <!-- NEW GROCERY ARTICLE -->
         <a href="articles/grocery-shopping-hell.html" class="card-link">
           <img src="/IMG_0036.jpeg" alt="Frustrated shopper fleeing exploding cart" class="card-img">
           <div class="card-body">
@@ -292,7 +308,7 @@
     <section id="interviews">
       <h2 class="section-title">Latest Interviews</h2>
       <div class="content-grid">
-        <article class="card">
+        <article class="card placeholder-card">
           <img src="/IMG_0039.jpeg" alt="Interviews in progress. Stay tuned." class="card-img">
           <div class="card-body">
             <div class="category">INTERVIEW</div>
