@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Viral Attention Media</title>
+  <meta name="description" content="Get in touch with Viral Attention Media. We're ready to discuss collaborations, interviews, submissions, and more."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --text-muted: #555555;
+      --primary: #0066ff;
+      --primary-dark: #0044cc;
+      --border: #e5e5e5;
+      --accent: #00ffff;
+    }
+    [data-theme="dark"] {
+      --bg: #0f0f0f;
+      --text: #f0f0f0;
+      --text-muted: #aaaaaa;
+      --primary: #4d9aff;
+      --primary-dark: #2e7aff;
+      --border: #333333;
+      --accent: #00ffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.9rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.6rem, 4.5vw, 2rem);
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    
+    .logo:hover {
+      transform: scale(1.03);
+    }
+    
+    .nav-links a {
+      margin-left: 1.6rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.25s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+    
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    
+    main {
+      padding-top: 9rem;
+      min-height: calc(100vh - 180px);
+      display: flex;
+      align-items: center;
+    }
+    
+    .contact-container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 5%;
+      text-align: center;
+    }
+    
+    .contact-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 8vw, 5.5rem);
+      margin-bottom: 1.2rem;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    
+    .contact-subtitle {
+      font-size: 1.35rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .contact-email {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+      transition: all 0.3s ease;
+      background: rgba(0, 102, 255, 0.03);
+    }
+    
+    .contact-email:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 102, 255, 0.25);
+    }
+    
+    .contact-info {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-top: 2rem;
+    }
+    
+    .social-links {
+      margin-top: 2.5rem;
+    }
+    
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 1.6rem;
+      margin: 0 1rem;
+      transition: color 0.25s;
+    }
+    
+    .social-links a:hover {
+      color: var(--primary);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 3rem 5% 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-title {
+        font-size: clamp(2.8rem, 10vw, 4.2rem);
+      }
+      .contact-email {
+        font-size: 1.5rem;
+        padding: 0.9rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="/" class="logo">Viral Attention Media</a>
+      
+      <div class="nav-links">
+        <a href="/">Home</a>
+      </div>
+      
+      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <h1 class="contact-title">Get in Touch</h1>
+      
+      <p class="contact-subtitle">
+        We're always interested in powerful stories, collaborations, interview opportunities, and anything that cuts through the noise.
+      </p>
+      
+      <a href="mailto:Contact@ViralAttentionMedia.com" class="contact-email">
+        Contact@ViralAttentionMedia.com
+      </a>
+      
+      <div class="contact-info">
+        <p>Expect a response within 24–48 hours.</p>
+        <p>We reply to every serious inquiry.</p>
+      </div>
+      
+      <div class="social-links">
+        <!-- Add your actual social links here when ready -->
+        <a href="#" title="X / Twitter">𝕏</a>
+        <a href="#" title="Instagram">Instagram</a>
+        <a href="#" title="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Viral Attention Media. All rights reserved.</p>
+    <p style="margin-top:0.6rem;">
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark' ||
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.setAttribute('data-theme', 'dark');
+      toggle.textContent = '🌙';
+    }
+
+    toggle.addEventListener('click', () => {
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '☀️';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>
