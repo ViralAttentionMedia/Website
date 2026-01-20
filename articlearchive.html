@@ -39,6 +39,7 @@
       line-height: 1.6;
       transition: background 0.4s, color 0.4s;
     }
+    
     header {
       position: fixed;
       top: 0;
@@ -47,6 +48,7 @@
       background: var(--bg);
       border-bottom: 1px solid var(--border);
     }
+    
     nav {
       max-width: 1400px;
       margin: 0 auto;
@@ -55,6 +57,7 @@
       justify-content: space-between;
       align-items: center;
     }
+    
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
@@ -96,18 +99,31 @@
       padding: 2rem 5% 6rem;
     }
     
+    .page-header {
+      text-align: center;
+      padding-bottom: 3rem;
+    }
+    
     .page-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 7vw, 5.2rem);
-      text-align: center;
-      margin-bottom: 3.5rem;
+      font-size: clamp(3.5rem, 8vw, 6.2rem);
+      margin-bottom: 0.4rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
       color: var(--text);
+    }
+    
+    .page-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto;
     }
     
     .archive-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 2.5rem;
+      gap: 2.8rem;
     }
     
     .archive-card {
@@ -115,7 +131,7 @@
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
       text-decoration: none;
       color: inherit;
       display: block;
@@ -128,7 +144,7 @@
     
     .archive-img {
       width: 100%;
-      height: 240px;
+      height: 260px;
       object-fit: cover;
       object-position: center;
       background: #333;
@@ -140,7 +156,7 @@
     }
     
     .archive-body {
-      padding: 1.6rem;
+      padding: 1.8rem;
     }
     
     .archive-category {
@@ -154,7 +170,7 @@
     }
     
     .archive-title {
-      font-size: 1.45rem;
+      font-size: 1.55rem;
       margin-bottom: 0.8rem;
       line-height: 1.3;
     }
@@ -179,8 +195,14 @@
     
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .page-title { font-size: clamp(2.6rem, 9vw, 4.2rem); }
+      .page-title { font-size: clamp(2.8rem, 10vw, 4.8rem); }
+      .archive-img { height: 220px; }
+      .archive-grid { gap: 2rem; }
+    }
+    
+    @media (max-width: 480px) {
       .archive-img { height: 200px; }
+      .archive-body { padding: 1.4rem; }
     }
   </style>
 </head>
@@ -199,13 +221,16 @@
   </header>
 
   <main>
-    <h1 class="page-title">Article Archive</h1>
+    <div class="page-header">
+      <h1 class="page-title">Article Archive</h1>
+      <p class="page-subtitle">A complete collection of exposés, critiques, deep dives, and stories that matter — newest first.</p>
+    </div>
     
     <div class="archive-grid">
 
-      <!-- Most recent first – add new articles at the top -->
+      <!-- Most recent first – add new articles at the top as needed -->
       <a href="articles/grocery-shopping-hell.html" class="archive-card">
-        <img src="/IMG_0036.jpeg" alt="Frustrated shopper" class="archive-img">
+        <img src="/IMG_0036.jpeg" alt="Frustrated shopper fleeing exploding cart" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">EXPOSE</div>
           <h2 class="archive-title">Grocery Shopping Hell: Robbed Blind in 2026!</h2>
@@ -214,7 +239,7 @@
       </a>
 
       <a href="articles/banks-overdraft-fees-predatory.html" class="archive-card">
-        <img src="/IMG_0032.jpeg" alt="Banker in rage" class="archive-img">
+        <img src="/IMG_0032.jpeg" alt="Banker clutching cash in rage" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">EXPOSE</div>
           <h2 class="archive-title">Banks’ Favorite Cash Grab: Kicking You When You’re Already Broke</h2>
@@ -223,7 +248,7 @@
       </a>
 
       <a href="articles/rotten-underbelly-modern-sports.html" class="archive-card">
-        <img src="/IMG_0006.jpeg" alt="Sheep Jersey" class="archive-img">
+        <img src="/IMG_0006.jpeg" alt="Sheep Jersey - Critique of Modern Sports" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">ARTICLE</div>
           <h2 class="archive-title">The Rotten Underbelly of Modern Sports: A Harsh Critique</h2>
@@ -231,7 +256,7 @@
         </div>
       </a>
 
-      <!-- Add more articles here in the future (newest at top) -->
+      <!-- Future articles go here ↑ (newest at top) -->
 
     </div>
   </main>
