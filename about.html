@@ -2,14 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About — Viral Attention Media</title>
-  <meta name="description" content="Viral Attention Media: Unfiltered stories, sharp analysis, and journalism that cuts through the noise."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   
+  <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
+  
+  <!-- Optimized Title: Keyword-rich, intent-driven, ~55–60 chars -->
+  <title>About Viral Attention Media – Independent Journalism & Unfiltered Stories</title>
+  
+  <!-- Meta Description: Descriptive + keywords + trust signals, ~155–160 chars -->
+  <meta name="description" content="About Viral Attention Media: Phoenix-based independent outlet delivering raw interviews, explosive exposés, fearless critiques, and stories that cut through the mainstream noise. No filter, no corporate leash."/>
+  
+  <!-- Open Graph & Twitter Cards – rich social previews for shares & backlinks -->
+  <meta property="og:title" content="About Viral Attention Media – Fearless Independent Journalism"/>
+  <meta property="og:description" content="Phoenix-based independent media founded in 2026. Unfiltered interviews, hard-hitting exposés, and stories that matter. No corporate backing. No sacred cows."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/> <!-- Use hero or logo – absolute URL -->
+  <meta property="og:url" content="https://viralatattentionmedia.com/about.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Viral Attention Media"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="About Viral Attention Media – Unfiltered & Fearless"/>
+  <meta name="twitter:description" content="Independent journalism from Phoenix. Raw interviews, exposés, and stories that cut through the noise."/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/>
+  
+  <!-- Canonical – prevents duplicate content issues -->
+  <link rel="canonical" href="https://viralatattentionmedia.com/about.html"/>
+  
+  <!-- Preload critical assets for faster Largest Contentful Paint (CWV boost) -->
+  <link rel="preload" as="image" href="/IMG_0021.jpeg" fetchpriority="high"/> <!-- Hero or relevant image -->
+  
+  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
+  <!-- Robots: Explicit full indexing permission -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  
+  <!-- Structured Data: AboutPage + Organization + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Viral Attention Media",
+    "description": "Independent journalism outlet delivering unfiltered interviews, exposés, critiques, and stories that matter. Founded in Phoenix, Arizona in 2026.",
+    "url": "https://viralatattentionmedia.com/about.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Viral Attention Media",
+      "url": "https://viralatattentionmedia.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://viralatattentionmedia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://viralatattentionmedia.com/about.html"
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Viral Attention Media",
+    "url": "https://viralatattentionmedia.com",
+    "logo": "https://viralatattentionmedia.com/logo.png", <!-- Replace with real logo URL -->
+    "description": "Phoenix-based independent media focused on unfiltered interviews, exposés, critiques, and impactful storytelling.",
+    "sameAs": [
+      "https://twitter.com/ViralAttnMedia", <!-- update with real profiles -->
+      "https://facebook.com/ViralAttentionMedia",
+      "https://instagram.com/viralattentionmedia"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -55,7 +134,7 @@
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
-      font-size: clamp(1.5rem, 4.2vw, 1.9rem); /* Responsive & fits 1 line */
+      font-size: clamp(1.5rem, 4.2vw, 1.9rem);
       letter-spacing: -0.03em;
       color: #00ffff;
       text-shadow: 
@@ -64,10 +143,10 @@
         -2px  2px 0 #000,
          2px  2px 0 #000;
       text-decoration: none;
-      white-space: nowrap; /* Forces single line */
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 70%; /* Prevents overflow on very small screens */
+      max-width: 70%;
       transition: transform 0.3s;
     }
     .logo:hover {
@@ -170,7 +249,6 @@
       
       <div class="nav-links">
         <a href="/">Home</a>
-        
       </div>
       
       <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
