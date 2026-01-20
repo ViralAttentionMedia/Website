@@ -2,14 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Viral Attention Media — Interviews • Articles • Impact</title>
-  <meta name="description" content="Viral Attention Media delivers powerful interviews, in-depth articles, and stories that matter."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   
+  <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
+  
+  <!-- Optimized Title: Keyword-rich, emotional, ~55–60 chars -->
+  <title>Viral Attention Media: Unfiltered Interviews & Hard-Hitting Exposés</title>
+  
+  <!-- Meta Description: Direct answer + curiosity + keywords, ~155–160 chars -->
+  <meta name="description" content="Viral Attention Media delivers raw interviews, explosive exposés, and stories that cut through the mainstream noise. Independent journalism from Phoenix, AZ – real impact, no filter."/>
+  
+  <!-- Open Graph & Twitter Cards – rich social previews for massive CTR -->
+  <meta property="og:title" content="Viral Attention Media – Stories That Cut Through the Noise"/>
+  <meta property="og:description" content="Unfiltered interviews, hard-hitting exposés, and fearless journalism. Phoenix-based independent media that sparks real conversation."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/> <!-- Use absolute URL for social sharing -->
+  <meta property="og:url" content="https://viralatattentionmedia.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Viral Attention Media"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Viral Attention Media – Unfiltered & Fearless"/>
+  <meta name="twitter:description" content="Raw interviews, explosive exposés, stories that matter. Independent media from Phoenix."/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/>
+  
+  <!-- Canonical – prevents duplicate content penalties -->
+  <link rel="canonical" href="https://viralatattentionmedia.com/"/>
+  
+  <!-- Preload critical hero image for faster LCP (Core Web Vitals boost) -->
+  <link rel="preload" as="image" href="/IMG_0021.jpeg" fetchpriority="high"/>
+  
+  <!-- Preconnect & preload fonts for faster rendering -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
+  <!-- Robots: Explicitly allow full indexing -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  
+  <!-- Structured Data: WebSite + Organization schema (entity authority) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Viral Attention Media",
+    "url": "https://viralatattentionmedia.com",
+    "description": "Independent media delivering unfiltered interviews, hard-hitting exposés, and stories that cut through the noise.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://viralatattentionmedia.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Viral Attention Media",
+    "url": "https://viralatattentionmedia.com",
+    "logo": "https://viralatattentionmedia.com/logo.png", <!-- Replace with your actual logo URL -->
+    "description": "Phoenix-based independent media focused on unfiltered interviews, exposés, and impactful storytelling.",
+    "sameAs": [
+      "https://twitter.com/ViralAttnMedia", <!-- update with real profiles -->
+      "https://facebook.com/ViralAttentionMedia",
+      "https://instagram.com/viralattentionmedia"
+    ]
+  }
+  </script>
+
+  <!-- Favicon – small trust/authority signal -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -187,11 +249,11 @@
     
     /* Special fix for the featured article card (IMG_0047) */
     .featured-card .card-img {
-      height: auto;                     /* Respect natural aspect ratio */
-      max-height: 420px;                /* Cap on desktop to avoid huge images */
-      object-fit: contain;              /* Show FULL image without cropping */
-      background: var(--card-bg);       /* Clean background if image has transparency */
-      padding: 12px 0;                  /* Breathing room top/bottom */
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: var(--card-bg);
+      padding: 12px 0;
       border-bottom: 1px solid var(--border);
     }
     
@@ -238,7 +300,6 @@
       .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .logo { font-size: 1.6rem; }
       
-      /* All cards on mobile: use contain + auto height for safety */
       .card-img {
         height: auto;
         max-height: none;
@@ -294,7 +355,7 @@
       <h2 class="section-title">Featured Articles</h2>
       <div class="content-grid">
 
-        <!-- FEATURED ARTICLE - PAY POLITICIANS - NOW FULLY VISIBLE -->
+        <!-- FEATURED ARTICLE -->
         <a href="articles/congress-average-pay.html" class="card-link featured-card">
           <img src="/IMG_0047.jpeg" alt="Politicians vs blue collar workers on scale" class="card-img">
           <div class="card-body">
