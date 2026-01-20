@@ -2,14 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Article Archive — Viral Attention Media</title>
-  <meta name="description" content="Browse every article published by Viral Attention Media. Exposés, critiques, deep dives, and more."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   
+  <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
+  
+  <!-- Optimized Title: Keyword-rich, intent-driven, ~55–60 chars -->
+  <title>Article Archive – Viral Attention Media: Exposés, Critiques & Deep Dives</title>
+  
+  <!-- Meta Description: Descriptive + keywords + curiosity, ~155–160 chars -->
+  <meta name="description" content="Explore the full archive of Viral Attention Media: hard-hitting exposés, sharp critiques, deep dives, and stories that matter. Newest independent journalism first – Phoenix, AZ."/>
+  
+  <!-- Open Graph & Twitter Cards – rich previews for social sharing & backlinks -->
+  <meta property="og:title" content="Article Archive – Viral Attention Media"/>
+  <meta property="og:description" content="Complete collection of powerful exposés, critiques, deep dives, and fearless stories. Independent media from Phoenix, Arizona – newest content first."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0049.jpeg"/> <!-- Use absolute URL – your latest featured image -->
+  <meta property="og:url" content="https://viralatattentionmedia.com/articlearchive.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Viral Attention Media"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Article Archive – Viral Attention Media"/>
+  <meta name="twitter:description" content="Exposés, critiques, deep dives, and stories that cut through the noise. Independent journalism archive."/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0049.jpeg"/>
+  
+  <!-- Canonical – prevents duplicate content penalties -->
+  <link rel="canonical" href="https://viralatattentionmedia.com/articlearchive.html"/>
+  
+  <!-- Preload critical assets for faster Largest Contentful Paint (CWV boost) -->
+  <link rel="preload" as="image" href="/IMG_0049.jpeg" fetchpriority="high"/> <!-- Your newest featured image -->
+  
+  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
+  <!-- Robots: Explicit full indexing permission -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  
+  <!-- Structured Data: CollectionPage + BreadcrumbList + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Article Archive – Viral Attention Media",
+    "description": "Complete archive of exposés, critiques, deep dives, and impactful stories from Viral Attention Media – newest first.",
+    "url": "https://viralatattentionmedia.com/articlearchive.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Viral Attention Media",
+      "url": "https://viralatattentionmedia.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://viralatattentionmedia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Article Archive",
+          "item": "https://viralatattentionmedia.com/articlearchive.html"
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Viral Attention Media",
+    "url": "https://viralatattentionmedia.com",
+    "logo": "https://viralatattentionmedia.com/logo.png" <!-- Replace with real logo URL -->
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -155,13 +228,13 @@
       transition: transform 0.4s;
     }
     
-    /* Fix for IMG_0046: make it fully visible on mobile */
+    /* Fix for featured image (IMG_0049) – fully visible */
     .featured-card .archive-img {
-      height: auto;                     /* Let natural aspect ratio breathe */
-      max-height: 400px;                /* Cap height on desktop */
-      object-fit: contain;              /* Show entire image without cropping */
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
       background: var(--card-bg);
-      padding: 12px 0;                  /* Add breathing room */
+      padding: 12px 0;
       border-bottom: 1px solid var(--border);
     }
     
