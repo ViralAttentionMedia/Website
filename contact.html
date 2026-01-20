@@ -162,17 +162,20 @@
     
     .social-links {
       margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
     }
     
     .social-links a {
       color: var(--text-muted);
-      font-size: 1.6rem;
-      margin: 0 1rem;
-      transition: color 0.25s;
+      font-size: 2rem;
+      transition: color 0.25s, transform 0.25s;
     }
     
     .social-links a:hover {
       color: var(--primary);
+      transform: translateY(-3px);
     }
     
     footer {
@@ -190,6 +193,12 @@
       .contact-email {
         font-size: 1.5rem;
         padding: 0.9rem 2rem;
+      }
+      .social-links {
+        gap: 1.5rem;
+      }
+      .social-links a {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -226,10 +235,9 @@
       </div>
       
       <div class="social-links">
-        <!-- Add your actual social links here when ready -->
-        <a href="#" title="X / Twitter">𝕏</a>
-        <a href="#" title="Instagram">Instagram</a>
-        <a href="#" title="LinkedIn">LinkedIn</a>
+        <a href="https://x.com/ViralAttention" title="Follow us on X" target="_blank" rel="noopener noreferrer">𝕏</a>
+        <a href="https://www.youtube.com/@ViralAttentionMedia" title="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.tiktok.com/@ViralAttention" title="Follow on TikTok" target="_blank" rel="noopener noreferrer">TikTok</a>
       </div>
     </div>
   </main>
