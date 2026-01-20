@@ -93,22 +93,25 @@
     }
     
     main {
-      padding-top: 9rem;
+      padding-top: 12rem;          /* Increased top padding to give more space below fixed nav */
       max-width: 1400px;
       margin: 0 auto;
-      padding: 2rem 5% 6rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 6rem;
     }
     
     .page-header {
       text-align: center;
-      padding-bottom: 3rem;
+      padding-bottom: 4rem;        /* More breathing room below title */
     }
     
     .page-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3.5rem, 8vw, 6.2rem);
-      margin-bottom: 0.4rem;
-      line-height: 1;
+      font-size: clamp(3.2rem, 7vw, 5.2rem);   /* Slightly smaller max size to prevent cutoff */
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
       letter-spacing: -0.02em;
       color: var(--text);
     }
@@ -118,6 +121,7 @@
       color: var(--text-muted);
       max-width: 720px;
       margin: 0 auto;
+      line-height: 1.5;
     }
     
     .archive-grid {
@@ -195,12 +199,15 @@
     
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .page-title { font-size: clamp(2.8rem, 10vw, 4.8rem); }
+      main { padding-top: 11rem; }        /* Slightly less on mobile but still safe */
+      .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
+      .page-header { padding-bottom: 3rem; }
       .archive-img { height: 220px; }
-      .archive-grid { gap: 2rem; }
+      .archive-grid { gap: 2.2rem; }
     }
     
     @media (max-width: 480px) {
+      .page-title { font-size: clamp(2.4rem, 10vw, 4rem); }
       .archive-img { height: 200px; }
       .archive-body { padding: 1.4rem; }
     }
@@ -228,9 +235,8 @@
     
     <div class="archive-grid">
 
-      <!-- Most recent first – add new articles at the top as needed -->
       <a href="articles/grocery-shopping-hell.html" class="archive-card">
-        <img src="/IMG_0036.jpeg" alt="Frustrated shopper fleeing exploding cart" class="archive-img">
+        <img src="/IMG_0036.jpeg" alt="Frustrated shopper" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">EXPOSE</div>
           <h2 class="archive-title">Grocery Shopping Hell: Robbed Blind in 2026!</h2>
@@ -239,7 +245,7 @@
       </a>
 
       <a href="articles/banks-overdraft-fees-predatory.html" class="archive-card">
-        <img src="/IMG_0032.jpeg" alt="Banker clutching cash in rage" class="archive-img">
+        <img src="/IMG_0032.jpeg" alt="Banker clutching cash" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">EXPOSE</div>
           <h2 class="archive-title">Banks’ Favorite Cash Grab: Kicking You When You’re Already Broke</h2>
@@ -248,7 +254,7 @@
       </a>
 
       <a href="articles/rotten-underbelly-modern-sports.html" class="archive-card">
-        <img src="/IMG_0006.jpeg" alt="Sheep Jersey - Critique of Modern Sports" class="archive-img">
+        <img src="/IMG_0006.jpeg" alt="Sheep Jersey critique" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">ARTICLE</div>
           <h2 class="archive-title">The Rotten Underbelly of Modern Sports: A Harsh Critique</h2>
@@ -256,7 +262,7 @@
         </div>
       </a>
 
-      <!-- Future articles go here ↑ (newest at top) -->
+      <!-- Add more articles here as needed -->
 
     </div>
   </main>
