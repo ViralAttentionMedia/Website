@@ -93,7 +93,7 @@
     }
     
     main {
-      padding-top: 12rem;          /* Increased top padding to give more space below fixed nav */
+      padding-top: 12rem;
       max-width: 1400px;
       margin: 0 auto;
       padding-left: 5%;
@@ -103,12 +103,12 @@
     
     .page-header {
       text-align: center;
-      padding-bottom: 4rem;        /* More breathing room below title */
+      padding-bottom: 4rem;
     }
     
     .page-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3.2rem, 7vw, 5.2rem);   /* Slightly smaller max size to prevent cutoff */
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
       font-weight: 700;
       line-height: 1.05;
       margin-bottom: 0.5rem;
@@ -199,7 +199,7 @@
     
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      main { padding-top: 11rem; }        /* Slightly less on mobile but still safe */
+      main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .page-header { padding-bottom: 3rem; }
       .archive-img { height: 220px; }
@@ -235,6 +235,16 @@
     
     <div class="archive-grid">
 
+      <!-- NEW ARTICLE - ADDED AT THE TOP (newest first) -->
+      <a href="articles/congress-average-pay.html" class="archive-card">
+        <img src="/IMG_0046.jpeg" alt="Politicians on one side of scale, blue collar workers on the other" class="archive-img">
+        <div class="archive-body">
+          <div class="archive-category">OPINION</div>
+          <h2 class="archive-title">Pay Politicians the National Average: The Radical Reset to Force Real Leadership and Crush Corruption</h2>
+          <p class="archive-meta">January 20, 2026 • ~6 min read</p>
+        </div>
+      </a>
+
       <a href="articles/grocery-shopping-hell.html" class="archive-card">
         <img src="/IMG_0036.jpeg" alt="Frustrated shopper" class="archive-img">
         <div class="archive-body">
@@ -262,7 +272,7 @@
         </div>
       </a>
 
-      <!-- Add more articles here as needed -->
+      <!-- Add more articles here as needed (newest at top) -->
 
     </div>
   </main>
