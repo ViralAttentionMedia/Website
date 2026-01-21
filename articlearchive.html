@@ -15,20 +15,20 @@
   <!-- Open Graph & Twitter Cards – rich previews for social sharing & backlinks -->
   <meta property="og:title" content="Article Archive – Viral Attention Media"/>
   <meta property="og:description" content="Complete collection of powerful exposés, critiques, deep dives, and fearless stories. Independent media from Phoenix, Arizona – newest content first."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0049.jpeg"/> <!-- Use absolute URL – your latest featured image -->
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/> <!-- Latest featured image -->
   <meta property="og:url" content="https://viralatattentionmedia.com/articlearchive.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Article Archive – Viral Attention Media"/>
   <meta name="twitter:description" content="Exposés, critiques, deep dives, and stories that cut through the noise. Independent journalism archive."/>
-  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0049.jpeg"/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   
   <!-- Canonical – prevents duplicate content penalties -->
   <link rel="canonical" href="https://viralatattentionmedia.com/articlearchive.html"/>
   
-  <!-- Preload critical assets for faster Largest Contentful Paint (CWV boost) -->
-  <link rel="preload" as="image" href="/IMG_0049.jpeg" fetchpriority="high"/> <!-- Your newest featured image -->
+  <!-- Preload newest featured image for faster Largest Contentful Paint (CWV boost) -->
+  <link rel="preload" as="image" href="/IMG_0056.jpeg" fetchpriority="high"/>
   
   <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -228,7 +228,7 @@
       transition: transform 0.4s;
     }
     
-    /* Fix for featured image (IMG_0049) – fully visible */
+    /* Fix for featured image – fully visible */
     .featured-card .archive-img {
       height: auto;
       max-height: 400px;
@@ -318,8 +318,18 @@
     <div class="archive-grid">
 
       <!-- NEW ARTICLE - ADDED AT THE TOP (newest first) -->
-      <a href="articles/congress-average-pay.html" class="archive-card featured-card">
-        <img src="/IMG_0049.jpeg" alt="Politicians vs blue collar workers on a scale" class="archive-img">
+      <a href="articles/retractable-dog-leash-disaster.html" class="archive-card featured-card">
+        <img src="/IMG_0056.jpeg" alt="Frustrated dog owner tangled in retractable leash chaos" class="archive-img">
+        <div class="archive-body">
+          <div class="archive-category">RANT</div>
+          <h2 class="archive-title">Retractable Dog Leashes Are a Total Disaster: The Inventor Deserves a Punch in the Face</h2>
+          <p class="archive-meta">January 21, 2026 • ~7 min read</p>
+        </div>
+      </a>
+
+      <!-- Previous newest (now second) -->
+      <a href="articles/congress-average-pay.html" class="archive-card">
+        <img src="/IMG_0047.jpeg" alt="Politicians vs blue collar workers on a scale" class="archive-img">
         <div class="archive-body">
           <div class="archive-category">OPINION</div>
           <h2 class="archive-title">Pay Politicians the National Average: The Radical Reset to Force Real Leadership and Crush Corruption</h2>
