@@ -228,14 +228,14 @@
       transition: transform 0.4s;
     }
     
-    /* Updated: Featured card image – taller, zoomed-in, fills space better */
+    /* Updated Featured Card Image: Taller + lower focus to show people AND dogs */
     .featured-card .archive-img {
       height: auto;
-      max-height: 520px;          /* Increased height for more visual impact */
-      object-fit: cover;          /* Zooms in and fills – focuses on people/dogs chaos */
-      object-position: center top; /* Prioritizes upper half (tangle/people/dogs) */
+      max-height: 520px;                /* Keeps the taller, dominant look */
+      object-fit: cover;                /* Zooms in and fills space */
+      object-position: center 40%;      /* Shifts focus LOWER to include people + dogs (40% from top) */
       background: var(--card-bg);
-      padding: 0;                 /* Full bleed – no wasted padding */
+      padding: 0;                       /* Full bleed – no padding waste */
       border-bottom: 1px solid var(--border);
     }
     
@@ -286,14 +286,20 @@
       main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .page-header { padding-bottom: 3rem; }
-      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center top; }
+      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center 40%; }
       .archive-grid { gap: 2.2rem; }
-      .featured-card .archive-img { max-height: 450px; } /* Slightly shorter on mobile for balance */
+      .featured-card .archive-img { 
+        max-height: 450px;                /* Slightly shorter on mobile for balance */
+        object-position: center 35%;      /* Adjusted slightly lower for mobile screens */
+      }
     }
     
     @media (max-width: 480px) {
       .archive-body { padding: 1.4rem; }
-      .featured-card .archive-img { max-height: 400px; padding: 0; }
+      .featured-card .archive-img { 
+        max-height: 400px; 
+        object-position: center 30%;      /* Even lower focus on very small screens */
+      }
     }
   </style>
 </head>
