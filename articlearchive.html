@@ -228,14 +228,14 @@
       transition: transform 0.4s;
     }
     
-    /* Updated Featured Card Image: Taller + lower focus to show people AND dogs */
+    /* Updated Featured Card Image: Taller + LOWER focus to show heads at top, full dogs at bottom */
     .featured-card .archive-img {
       height: auto;
-      max-height: 520px;                /* Keeps the taller, dominant look */
+      max-height: 520px;                /* Keeps tall, dominant size */
       object-fit: cover;                /* Zooms in and fills space */
-      object-position: center 40%;      /* Shifts focus LOWER to include people + dogs (40% from top) */
+      object-position: center 65%;      /* Shifted LOWER – heads near top edge, dogs fully visible at bottom */
       background: var(--card-bg);
-      padding: 0;                       /* Full bleed – no padding waste */
+      padding: 0;                       /* Full bleed */
       border-bottom: 1px solid var(--border);
     }
     
@@ -286,11 +286,11 @@
       main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .page-header { padding-bottom: 3rem; }
-      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center 40%; }
+      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center 60%; }
       .archive-grid { gap: 2.2rem; }
       .featured-card .archive-img { 
-        max-height: 450px;                /* Slightly shorter on mobile for balance */
-        object-position: center 35%;      /* Adjusted slightly lower for mobile screens */
+        max-height: 450px; 
+        object-position: center 55%;      /* Slightly less aggressive on mobile for balance */
       }
     }
     
@@ -298,7 +298,7 @@
       .archive-body { padding: 1.4rem; }
       .featured-card .archive-img { 
         max-height: 400px; 
-        object-position: center 30%;      /* Even lower focus on very small screens */
+        object-position: center 50%;      /* Centers more evenly on tiny screens */
       }
     }
   </style>
