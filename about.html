@@ -6,16 +6,13 @@
   
   <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
   
-  <!-- Optimized Title: Keyword-rich, intent-driven, ~55–60 chars -->
   <title>About Viral Attention Media – Independent Journalism & Unfiltered Stories</title>
   
-  <!-- Meta Description: Descriptive + keywords + trust signals, ~155–160 chars -->
   <meta name="description" content="About Viral Attention Media: Phoenix-based independent outlet delivering raw interviews, explosive exposés, fearless critiques, and stories that cut through the mainstream noise. No filter, no corporate leash."/>
   
-  <!-- Open Graph & Twitter Cards – rich social previews for shares & backlinks -->
   <meta property="og:title" content="About Viral Attention Media – Fearless Independent Journalism"/>
   <meta property="og:description" content="Phoenix-based independent media founded in 2026. Unfiltered interviews, hard-hitting exposés, and stories that matter. No corporate backing. No sacred cows."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/> <!-- Use hero or logo – absolute URL -->
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/>
   <meta property="og:url" content="https://viralatattentionmedia.com/about.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
@@ -24,21 +21,16 @@
   <meta name="twitter:description" content="Independent journalism from Phoenix. Raw interviews, exposés, and stories that cut through the noise."/>
   <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/>
   
-  <!-- Canonical – prevents duplicate content issues -->
   <link rel="canonical" href="https://viralatattentionmedia.com/about.html"/>
   
-  <!-- Preload critical assets for faster Largest Contentful Paint (CWV boost) -->
-  <link rel="preload" as="image" href="/IMG_0021.jpeg" fetchpriority="high"/> <!-- Hero or relevant image -->
+  <link rel="preload" as="image" href="/IMG_0021.jpeg" fetchpriority="high"/>
   
-  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
-  <!-- Robots: Explicit full indexing permission -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   
-  <!-- Structured Data: AboutPage + Organization + BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,17 +68,16 @@
     "@type": "Organization",
     "name": "Viral Attention Media",
     "url": "https://viralatattentionmedia.com",
-    "logo": "https://viralatattentionmedia.com/logo.png", <!-- Replace with real logo URL -->
+    "logo": "https://viralatattentionmedia.com/logo.png",
     "description": "Independent media focused on unfiltered interviews, exposés, critiques, and impactful storytelling.",
     "sameAs": [
-      "https://twitter.com/ViralAttnMedia", <!-- update with real profiles -->
+      "https://twitter.com/ViralAttnMedia",
       "https://facebook.com/ViralAttentionMedia",
       "https://instagram.com/viralattentionmedia"
     ]
   }
   </script>
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
@@ -97,6 +88,8 @@
       --primary: #0066ff;
       --primary-dark: #0044cc;
       --border: #e5e5e5;
+      --card-bg: #f9f9f9;
+      --accent: #00ffff;
     }
     [data-theme="dark"] {
       --bg: #0f0f0f;
@@ -105,6 +98,7 @@
       --primary: #4d9aff;
       --primary-dark: #2e7aff;
       --border: #333333;
+      --card-bg: #1a1a1a;
     }
     
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -126,34 +120,43 @@
     nav {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0.8rem 5%;
+      padding: 0.9rem 5%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
     }
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
-      font-size: clamp(1.5rem, 4.2vw, 1.9rem);
-      letter-spacing: -0.03em;
-      color: #00ffff;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      letter-spacing: -0.04em;
+      color: var(--accent);
       text-shadow: 
         -2px -2px 0 #000,  
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000;
       text-decoration: none;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 70%;
       transition: transform 0.3s;
+      text-align: center;
     }
-    .logo:hover {
-      transform: scale(1.03);
+    .logo:hover { transform: scale(1.05); }
+    
+    .nav-links-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
     }
     .nav-links a {
-      margin-left: 1.5rem;
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
@@ -161,10 +164,11 @@
       transition: color 0.25s;
     }
     .nav-links a:hover { color: var(--primary); }
+    
     .theme-toggle {
       background: none;
       border: none;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       cursor: pointer;
       color: var(--text-muted);
     }
@@ -232,12 +236,37 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 0.8rem 4%; flex-wrap: wrap; }
-      .logo { font-size: clamp(1.4rem, 5vw, 1.7rem); max-width: 60%; }
-      .nav-links { margin-top: 0.5rem; flex-wrap: wrap; justify-content: center; }
-      .nav-links a { margin: 0.3rem 0.8rem; font-size: 0.9rem; }
+      main { padding-top: 11rem; }
       .page-title { font-size: clamp(2rem, 7vw, 3.4rem); padding: 0 0.5rem; }
-      main { padding-top: 8.5rem; }
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        width: 100%;
+      }
+      .theme-toggle {
+        order: -1; /* Moves toggle to left of links */
+      }
+      .nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nav-links-container {
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -247,11 +276,16 @@
     <nav aria-label="Main navigation">
       <a href="/" class="logo">Viral Attention Media</a>
       
-      <div class="nav-links">
-        <a href="/">Home</a>
+      <div class="nav-links-container">
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        
+        <div class="nav-links">
+          <a href="#interviews">Interviews</a>
+          <a href="articlearchive.html">Articles</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
-      
-      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
     </nav>
   </header>
 
