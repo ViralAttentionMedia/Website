@@ -6,16 +6,13 @@
   
   <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
   
-  <!-- Optimized Title: Keyword-rich, intent-driven, ~55–60 chars -->
   <title>Article Archive – Viral Attention Media: Exposés, Critiques & Deep Dives</title>
   
-  <!-- Meta Description: Descriptive + keywords + curiosity, ~155–160 chars -->
   <meta name="description" content="Explore the full archive of Viral Attention Media: hard-hitting exposés, sharp critiques, deep dives, and stories that matter. Newest independent journalism first – Phoenix, AZ."/>
   
-  <!-- Open Graph & Twitter Cards – rich previews for social sharing & backlinks -->
   <meta property="og:title" content="Article Archive – Viral Attention Media"/>
   <meta property="og:description" content="Complete collection of powerful exposés, critiques, deep dives, and fearless stories. Independent media from Phoenix, Arizona – newest content first."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/> <!-- Latest featured image -->
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   <meta property="og:url" content="https://viralatattentionmedia.com/articlearchive.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
@@ -24,21 +21,16 @@
   <meta name="twitter:description" content="Exposés, critiques, deep dives, and stories that cut through the noise. Independent journalism archive."/>
   <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   
-  <!-- Canonical – prevents duplicate content penalties -->
   <link rel="canonical" href="https://viralatattentionmedia.com/articlearchive.html"/>
   
-  <!-- Preload newest featured image for faster Largest Contentful Paint (CWV boost) -->
   <link rel="preload" as="image" href="/IMG_0056.jpeg" fetchpriority="high"/>
   
-  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
-  <!-- Robots: Explicit full indexing permission -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   
-  <!-- Structured Data: CollectionPage + BreadcrumbList + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,11 +68,10 @@
     "@type": "Organization",
     "name": "Viral Attention Media",
     "url": "https://viralatattentionmedia.com",
-    "logo": "https://viralatattentionmedia.com/logo.png" <!-- Replace with real logo URL -->
+    "logo": "https://viralatattentionmedia.com/logo.png"
   }
   </script>
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
@@ -112,7 +103,6 @@
       line-height: 1.6;
       transition: background 0.4s, color 0.4s;
     }
-    
     header {
       position: fixed;
       top: 0;
@@ -121,21 +111,20 @@
       background: var(--bg);
       border-bottom: 1px solid var(--border);
     }
-    
     nav {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0.9rem 5%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
     }
-    
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
-      font-size: clamp(1.6rem, 4.5vw, 2rem);
-      letter-spacing: -0.03em;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      letter-spacing: -0.04em;
       color: var(--accent);
       text-shadow: 
         -2px -2px 0 #000,  
@@ -144,11 +133,24 @@
          2px  2px 0 #000;
       text-decoration: none;
       transition: transform 0.3s;
+      text-align: center;
     }
-    .logo:hover { transform: scale(1.03); }
+    .logo:hover { transform: scale(1.05); }
     
+    .nav-links-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
     .nav-links a {
-      margin-left: 1.6rem;
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
@@ -160,7 +162,7 @@
     .theme-toggle {
       background: none;
       border: none;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       cursor: pointer;
       color: var(--text-muted);
     }
@@ -228,14 +230,13 @@
       transition: transform 0.4s;
     }
     
-    /* Updated Featured Card Image: Taller + LOWER focus to show heads at top, full dogs at bottom */
     .featured-card .archive-img {
       height: auto;
-      max-height: 520px;                /* Keeps tall, dominant size */
-      object-fit: cover;                /* Zooms in and fills space */
-      object-position: center 65%;      /* Shifted LOWER – heads near top edge, dogs fully visible at bottom */
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center 68%;
       background: var(--card-bg);
-      padding: 0;                       /* Full bleed */
+      padding: 0;
       border-bottom: 1px solid var(--border);
     }
     
@@ -282,15 +283,33 @@
     }
     
     @media (max-width: 768px) {
-      .nav-links { display: none; }
       main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .page-header { padding-bottom: 3rem; }
-      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center 60%; }
+      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center 78%; }
       .archive-grid { gap: 2.2rem; }
       .featured-card .archive-img { 
         max-height: 450px; 
-        object-position: center 55%;      /* Slightly less aggressive on mobile for balance */
+        object-position: center 78%;
+      }
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        width: 100%;
+      }
+      .theme-toggle {
+        order: -1; /* Moves toggle to left of links */
+      }
+      .nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+        font-size: 0.9rem;
       }
     }
     
@@ -298,7 +317,14 @@
       .archive-body { padding: 1.4rem; }
       .featured-card .archive-img { 
         max-height: 400px; 
-        object-position: center 50%;      /* Centers more evenly on tiny screens */
+        object-position: center bottom 8%;
+      }
+      .nav-links-container {
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 0.8rem 1.2rem;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -309,11 +335,13 @@
     <nav aria-label="Main navigation">
       <a href="/" class="logo">Viral Attention Media</a>
       
-      <div class="nav-links">
-        <a href="/">Home</a>
+      <div class="nav-links-container">
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        
+        <div class="nav-links">
+          <a href="/">Home</a>
+        </div>
       </div>
-      
-      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
     </nav>
   </header>
 
