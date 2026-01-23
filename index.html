@@ -68,7 +68,7 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      overflow-x: hidden; /* Prevents any horizontal scroll/shift */
+      overflow-x: hidden;
     }
     
     :root {
@@ -226,19 +226,20 @@
       margin: 5rem auto 3.5rem;
       max-width: 100%;
       width: 100%;
-      padding: 0 5%;
+      padding: 0;
     }
     
     .content-grid {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 5%;
+      padding: 0;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 2.8rem;
       width: 100%;
       box-sizing: border-box;
     }
+    
     .card-link {
       display: block;
       background: var(--card-bg);
@@ -248,6 +249,8 @@
       transition: transform 0.3s, box-shadow 0.3s;
       text-decoration: none;
       color: inherit;
+      margin: 0 auto;
+      max-width: 100%;
     }
     .card-link:hover {
       transform: translateY(-8px);
@@ -261,6 +264,7 @@
       object-position: center top;
       background: #333;
       transition: transform 0.4s;
+      display: block;
     }
     
     .featured-card .card-img {
@@ -339,12 +343,22 @@
       .hero { padding: 10rem 5% 12rem; }
       .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       
+      .content-grid {
+        padding: 0 4%;
+        gap: 2rem;
+      }
+      
+      .card-link {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      
       .card-img {
         height: auto;
         max-height: none;
         object-fit: cover;
         background: var(--card-bg);
-        padding: 10px 0;
+        padding: 0;
       }
       
       .featured-card .card-img {
@@ -356,22 +370,21 @@
         height: auto;
         object-fit: contain;
         background: var(--card-bg);
-        padding: 10px;
+        padding: 0;
       }
       
       .section-title {
-        margin: 3rem auto 2.5rem;
-        padding: 0 5%;
-        width: 100%;
-      }
-      
-      .content-grid {
+        margin: 3rem auto 2rem;
         padding: 0 4%;
         width: 100%;
       }
     }
     
     @media (max-width: 480px) {
+      .content-grid {
+        padding: 0 3%;
+        gap: 1.8rem;
+      }
       .nav-links-container {
         gap: 0.8rem;
       }
@@ -385,6 +398,7 @@
       }
       .section-title {
         font-size: 2.2rem;
+        margin: 2.5rem auto 1.8rem;
       }
     }
   </style>
