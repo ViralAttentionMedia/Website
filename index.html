@@ -64,13 +64,6 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      overflow-x: hidden;
-    }
-    
     :root {
       --bg: #ffffff;
       --text: #111111;
@@ -92,6 +85,14 @@
     }
     
     * { margin:0; padding:0; box-sizing:border-box; }
+    
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
@@ -100,6 +101,12 @@
       transition: background 0.4s, color 0.4s;
       scroll-behavior: smooth;
     }
+    
+    header, main, footer, .content-grid {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
     header {
       position: fixed;
       top: 0;
@@ -131,6 +138,8 @@
       text-decoration: none;
       transition: transform 0.3s;
       text-align: center;
+      max-width: 100%;
+      overflow: hidden;
     }
     .logo:hover { transform: scale(1.05); }
     
@@ -140,7 +149,6 @@
       justify-content: center;
       gap: 1.5rem;
       flex-wrap: wrap;
-      width: 100%;
     }
     .nav-links {
       display: flex;
@@ -166,6 +174,7 @@
     }
     
     main { padding-top: 9rem; }
+    
     .hero {
       position: relative;
       text-align: center;
@@ -224,93 +233,88 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       margin: 5rem auto 3.5rem;
-      max-width: 100%;
-      width: 100%;
-      padding: 0;
+      max-width: 720px;
     }
     
     .content-grid {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0;
+      padding: 0 5%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2.8rem;
-      width: 100%;
-      box-sizing: border-box;
     }
     
-    .card-link {
-      display: block;
+    .archive-card {
       background: var(--card-bg);
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
       text-decoration: none;
       color: inherit;
-      margin: 0 auto;
+      display: block;
       max-width: 100%;
     }
-    .card-link:hover {
+    
+    .archive-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
     
-    .card-img {
+    .archive-img {
       width: 100%;
-      height: 320px;
+      height: 260px;
       object-fit: cover;
-      object-position: center top;
+      object-position: center;
       background: #333;
       transition: transform 0.4s;
       display: block;
+      max-width: 100%;
     }
     
-    .featured-card .card-img {
+    .featured-card .archive-img {
       height: auto;
       max-height: 520px;
       object-fit: cover;
-      object-position: center 65%;
+      object-position: center 68%;
       background: var(--card-bg);
       padding: 0;
       border-bottom: 1px solid var(--border);
     }
     
-    .card-link:hover .card-img {
-      transform: scale(1.04);
+    .archive-card:hover .archive-img {
+      transform: scale(1.03);
     }
     
-    .card-body {
+    .archive-body {
       padding: 1.8rem;
     }
-    .category {
+    
+    .archive-category {
       display: inline-block;
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--primary);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      margin-bottom: 0.8rem;
-    }
-    .card-title {
-      font-size: 1.55rem;
-      margin-bottom: 0.9rem;
-      line-height: 1.3;
-    }
-    .card-link:hover .card-title {
-      text-decoration: underline;
-    }
-    .meta {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
     }
     
-    .placeholder-card .card-img {
-      height: 320px;
-      object-fit: cover;
-      object-position: center;
+    .archive-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+    }
+    
+    .archive-card:hover .archive-title {
+      text-decoration: underline;
+    }
+    
+    .archive-meta {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
     }
     
     footer {
@@ -318,9 +322,21 @@
       padding: 4rem 5% 2.5rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
+      margin-top: 6rem;
     }
     
     @media (max-width: 768px) {
+      main { padding-top: 11rem; }
+      .hero { padding: 10rem 5% 12rem; }
+      .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
+      .content-grid { 
+        padding: 0 5%; 
+        gap: 2.2rem; 
+      }
+      .featured-card .archive-img { 
+        max-height: 450px; 
+        object-position: center 78%;
+      }
       .nav-links-container {
         display: flex;
         align-items: center;
@@ -340,50 +356,19 @@
         gap: 1rem 1.5rem;
         font-size: 0.9rem;
       }
-      .hero { padding: 10rem 5% 12rem; }
-      .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
-      
-      .content-grid {
-        padding: 0 4%;
-        gap: 2rem;
-      }
-      
-      .card-link {
-        max-width: 100%;
-        margin: 0 auto;
-      }
-      
-      .card-img {
-        height: auto;
-        max-height: none;
-        object-fit: cover;
-        background: var(--card-bg);
-        padding: 0;
-      }
-      
-      .featured-card .card-img {
-        max-height: 450px;
-        object-position: center 60%;
-      }
-      
-      .placeholder-card .card-img {
-        height: auto;
-        object-fit: contain;
-        background: var(--card-bg);
-        padding: 0;
-      }
-      
-      .section-title {
-        margin: 3rem auto 2rem;
-        padding: 0 4%;
-        width: 100%;
-      }
     }
     
     @media (max-width: 480px) {
       .content-grid {
-        padding: 0 3%;
-        gap: 1.8rem;
+        padding: 0 4%;
+      }
+      nav {
+        padding: 0.9rem 4%;
+      }
+      .archive-body { padding: 1.4rem; }
+      .featured-card .archive-img { 
+        max-height: 400px; 
+        object-position: center bottom 8%;
       }
       .nav-links-container {
         gap: 0.8rem;
@@ -392,13 +377,12 @@
         gap: 0.8rem 1.2rem;
         font-size: 0.85rem;
       }
-      .featured-card .card-img {
-        max-height: 400px;
-        object-position: center 55%;
+      .logo {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
       }
       .section-title {
-        font-size: 2.2rem;
-        margin: 2.5rem auto 1.8rem;
+        font-size: 2.4rem;
+        margin: 3rem auto 2rem;
       }
     }
   </style>
@@ -433,33 +417,33 @@
       <h2 class="section-title">Featured Articles</h2>
       <div class="content-grid">
 
-        <!-- 1. NEWEST ARTICLE – TOP SPOT -->
-        <a href="articles/retractable-dog-leash-disaster.html" class="card-link featured-card">
-          <img src="/IMG_0056.jpeg" alt="Frustrated owners and dogs tangled in retractable leash chaos" class="card-img">
-          <div class="card-body">
-            <div class="category">RANT</div>
-            <h3 class="card-title">Retractable Dog Leashes Are a Total Disaster: The Inventor Deserves a Punch in the Face</h3>
-            <p class="meta">Jan 21, 2026 • ~7 min read</p>
+        <!-- 1. NEWEST ARTICLE – TOP SPOT (featured) -->
+        <a href="articles/retractable-dog-leash-disaster.html" class="archive-card featured-card">
+          <img src="/IMG_0056.jpeg" alt="Frustrated owners and dogs tangled in retractable leash chaos" class="archive-img">
+          <div class="archive-body">
+            <div class="archive-category">RANT</div>
+            <h3 class="archive-title">Retractable Dog Leashes Are a Total Disaster: The Inventor Deserves a Punch in the Face</h3>
+            <p class="archive-meta">January 21, 2026 • ~7 min read</p>
           </div>
         </a>
 
         <!-- 2. Second newest -->
-        <a href="articles/congress-average-pay.html" class="card-link">
-          <img src="/IMG_0047.jpeg" alt="Politicians vs blue collar workers on a scale" class="card-img">
-          <div class="card-body">
-            <div class="category">OPINION</div>
-            <h3 class="card-title">Pay Politicians the National Average: The Radical Reset to Force Real Leadership and Crush Corruption</h3>
-            <p class="meta">Jan 20, 2026 • ~6 min read</p>
+        <a href="articles/congress-average-pay.html" class="archive-card">
+          <img src="/IMG_0047.jpeg" alt="Politicians vs blue collar workers on a scale" class="archive-img">
+          <div class="archive-body">
+            <div class="archive-category">OPINION</div>
+            <h3 class="archive-title">Pay Politicians the National Average: The Radical Reset to Force Real Leadership and Crush Corruption</h3>
+            <p class="archive-meta">January 20, 2026 • ~6 min read</p>
           </div>
         </a>
 
         <!-- 3. Third newest -->
-        <a href="articles/grocery-shopping-hell.html" class="card-link">
-          <img src="/IMG_0036.jpeg" alt="Frustrated shopper fleeing exploding cart" class="card-img">
-          <div class="card-body">
-            <div class="category">EXPOSE</div>
-            <h3 class="card-title">Grocery Shopping Nightmare 2026: Shrinkflation, Greed & Rage-Inducing Chaos!</h3>
-            <p class="meta">Jan 19, 2026 • ~7 min read</p>
+        <a href="articles/grocery-shopping-hell.html" class="archive-card">
+          <img src="/IMG_0036.jpeg" alt="Frustrated shopper" class="archive-img">
+          <div class="archive-body">
+            <div class="archive-category">EXPOSE</div>
+            <h3 class="archive-title">Grocery Shopping Hell: Robbed Blind in 2026!</h3>
+            <p class="archive-meta">January 19, 2026 • ~7 min read</p>
           </div>
         </a>
 
@@ -469,14 +453,14 @@
     <section id="interviews">
       <h2 class="section-title">Latest Interviews</h2>
       <div class="content-grid">
-        <article class="card placeholder-card">
-          <img src="/IMG_0039.jpeg" alt="Interviews in progress. Stay tuned." class="card-img">
-          <div class="card-body">
-            <div class="category">INTERVIEW</div>
-            <h3>Interviews in progress. Stay tuned.</h3>
-            <p class="meta">Coming Soon</p>
+        <div class="archive-card">
+          <img src="/IMG_0039.jpeg" alt="Interviews in progress. Stay tuned." class="archive-img">
+          <div class="archive-body">
+            <div class="archive-category">COMING SOON</div>
+            <h3 class="archive-title">Interviews in Progress – Stay Tuned</h3>
+            <p class="archive-meta">Powerful voices. Unfiltered truth. Arriving soon.</p>
           </div>
-        </article>
+        </div>
       </div>
     </section>
   </main>
