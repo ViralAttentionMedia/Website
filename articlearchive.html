@@ -238,25 +238,30 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
     
-    .archive-img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      object-position: center;
+    .archive-img-wrapper {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 aspect ratio for consistency */
+      overflow: hidden;
       background: #333;
-      transition: transform 0.4s;
-      display: block;
-      max-width: 100%;
     }
     
-    .featured-card .archive-img {
-      height: auto;
-      max-height: 520px;
+    .archive-img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      object-position: center 68%;
-      background: var(--card-bg);
-      padding: 0;
-      border-bottom: 1px solid var(--border);
+      object-position: center;
+      transition: transform 0.4s;
+    }
+    
+    .featured-card {
+      grid-column: 1 / -1; /* Full width on all sizes above mobile */
+    }
+    
+    .featured-card .archive-img-wrapper {
+      padding-top: 56.25%; /* Consistent aspect, or adjust to 75% for taller hero */
+      max-height: 520px; /* Optional cap */
     }
     
     .archive-card:hover .archive-img {
@@ -295,6 +300,7 @@
     
     .section {
       margin-bottom: 5rem;
+      text-align: center;
     }
     
     .cta {
@@ -322,15 +328,38 @@
       margin-top: 6rem;
     }
     
+    /* Tablet/iPad improvements (768px–1024px) */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      main {
+        padding-top: 11rem;
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+      .archive-grid {
+        gap: 2.5rem;
+        grid-template-columns: repeat(2, 1fr); /* Force 2 cols for cleaner tablet look */
+      }
+      .featured-card .archive-img-wrapper {
+        padding-top: 50%; /* Slightly shorter hero on tablet for balance */
+      }
+      .archive-body {
+        padding: 1.6rem;
+      }
+      .page-header {
+        padding-bottom: 3.5rem;
+      }
+    }
+    
+    /* Your original mobile rules – unchanged */
     @media (max-width: 768px) {
       main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .page-header { padding-bottom: 3rem; }
-      .archive-img { height: auto; max-height: none; object-fit: cover; object-position: center 78%; }
+      .archive-img-wrapper { padding-top: 75%; } /* Taller on mobile for impact */
       .archive-grid { gap: 2.2rem; }
-      .featured-card .archive-img { 
-        max-height: 450px; 
-        object-position: center 78%;
+      .featured-card .archive-img-wrapper { 
+        padding-top: 75%; 
+        max-height: none;
       }
       .nav-links-container {
         display: flex;
@@ -342,7 +371,7 @@
         width: 100%;
       }
       .theme-toggle {
-        order: -1; /* Moves toggle to left of links */
+        order: -1;
       }
       .nav-links {
         display: flex !important;
@@ -362,9 +391,8 @@
         padding: 0.9rem 4%;
       }
       .archive-body { padding: 1.4rem; }
-      .featured-card .archive-img { 
-        max-height: 400px; 
-        object-position: center bottom 8%;
+      .featured-card .archive-img-wrapper { 
+        padding-top: 100%; /* Square-ish on very small screens */
       }
       .nav-links-container {
         gap: 0.8rem;
@@ -406,9 +434,11 @@
     
     <div class="archive-grid">
 
-      <!-- NEW ARTICLE - FEATURED AT TOP (newest first) -->
+      <!-- Featured (now full-width on tablet/desktop) -->
       <a href="articles/retractable-dog-leash-disaster.html" class="archive-card featured-card">
-        <img src="/IMG_0056.jpeg" alt="Frustrated owners and dogs tangled in retractable leash chaos" class="archive-img">
+        <div class="archive-img-wrapper">
+          <img src="/IMG_0056.jpeg" alt="Frustrated owners and dogs tangled in retractable leash chaos" class="archive-img">
+        </div>
         <div class="archive-body">
           <div class="archive-category">RANT</div>
           <h2 class="archive-title">Retractable Dog Leashes Are a Total Disaster: The Inventor Deserves a Punch in the Face</h2>
@@ -416,9 +446,11 @@
         </div>
       </a>
 
-      <!-- Previous newest (now second) -->
+      <!-- Regular cards -->
       <a href="articles/congress-average-pay.html" class="archive-card">
-        <img src="/IMG_0047.jpeg" alt="Politicians vs blue collar workers on a scale" class="archive-img">
+        <div class="archive-img-wrapper">
+          <img src="/IMG_0047.jpeg" alt="Politicians vs blue collar workers on a scale" class="archive-img">
+        </div>
         <div class="archive-body">
           <div class="archive-category">OPINION</div>
           <h2 class="archive-title">Pay Politicians the National Average: The Radical Reset to Force Real Leadership and Crush Corruption</h2>
@@ -427,7 +459,9 @@
       </a>
 
       <a href="articles/grocery-shopping-hell.html" class="archive-card">
-        <img src="/IMG_0036.jpeg" alt="Frustrated shopper" class="archive-img">
+        <div class="archive-img-wrapper">
+          <img src="/IMG_0036.jpeg" alt="Frustrated shopper" class="archive-img">
+        </div>
         <div class="archive-body">
           <div class="archive-category">EXPOSE</div>
           <h2 class="archive-title">Grocery Shopping Hell: Robbed Blind in 2026!</h2>
@@ -436,7 +470,9 @@
       </a>
 
       <a href="articles/banks-overdraft-fees-predatory.html" class="archive-card">
-        <img src="/IMG_0032.jpeg" alt="Banker clutching cash" class="archive-img">
+        <div class="archive-img-wrapper">
+          <img src="/IMG_0032.jpeg" alt="Banker clutching cash" class="archive-img">
+        </div>
         <div class="archive-body">
           <div class="archive-category">EXPOSE</div>
           <h2 class="archive-title">Banks’ Favorite Cash Grab: Kicking You When You’re Already Broke</h2>
@@ -445,7 +481,9 @@
       </a>
 
       <a href="articles/rotten-underbelly-modern-sports.html" class="archive-card">
-        <img src="/IMG_0006.jpeg" alt="Sheep Jersey critique" class="archive-img">
+        <div class="archive-img-wrapper">
+          <img src="/IMG_0006.jpeg" alt="Sheep Jersey critique" class="archive-img">
+        </div>
         <div class="archive-body">
           <div class="archive-category">ARTICLE</div>
           <h2 class="archive-title">The Rotten Underbelly of Modern Sports: A Harsh Critique</h2>
@@ -453,11 +491,11 @@
         </div>
       </a>
 
-      <!-- Add more articles here as needed (newest at top) -->
+      <!-- Add more as needed -->
 
     </div>
 
-    <div class="section" style="text-align:center;">
+    <div class="section">
       <a href="/" class="cta">Back to Stories</a>
     </div>
   </main>
