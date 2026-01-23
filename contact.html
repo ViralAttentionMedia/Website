@@ -205,6 +205,7 @@
       max-width: 620px;
       margin-left: auto;
       margin-right: auto;
+      word-break: break-word;
     }
     
     .contact-email {
@@ -219,6 +220,10 @@
       margin-bottom: 2.5rem;
       transition: all 0.3s ease;
       background: rgba(0, 102, 255, 0.03);
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     
     .contact-email:hover {
@@ -232,6 +237,7 @@
       font-size: 1.1rem;
       color: var(--text-muted);
       margin-top: 2rem;
+      word-break: break-word;
     }
     
     .social-links {
@@ -239,6 +245,7 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     
     .social-links a {
@@ -262,12 +269,29 @@
     
     @media (max-width: 768px) {
       main { padding-top: 11rem; }
-      .contact-title { font-size: clamp(2.8rem, 10vw, 4.2rem); padding: 0 0.5rem; }
-      .contact-subtitle { font-size: 1.2rem; }
-      .contact-email { font-size: 1.5rem; padding: 0.9rem 2rem; width: 100%; }
-      .social-links { gap: 1.5rem; }
-      .social-links a { font-size: 1.8rem; }
-      .contact-container { padding: 0 4%; }
+      .contact-container { 
+        padding: 0 4%; 
+        max-width: 100%; 
+      }
+      .contact-title { 
+        font-size: clamp(2.8rem, 10vw, 4.2rem); 
+        padding: 0 0.5rem; 
+      }
+      .contact-subtitle { 
+        font-size: 1.2rem; 
+      }
+      .contact-email { 
+        font-size: 1.5rem; 
+        padding: 0.9rem 1.5rem; 
+        width: 100%; 
+      }
+      .social-links { 
+        gap: 1.5rem; 
+        flex-wrap: wrap; 
+      }
+      .social-links a { 
+        font-size: 1.8rem; 
+      }
       .nav-links-container {
         display: flex;
         align-items: center;
@@ -297,7 +321,13 @@
         gap: 0.8rem 1.2rem;
         font-size: 0.85rem;
       }
-      .contact-email { font-size: 1.3rem; padding: 0.8rem 1.8rem; }
+      .contact-email { 
+        font-size: 1.3rem; 
+        padding: 0.8rem 1.2rem; 
+      }
+      .social-links a { 
+        font-size: 1.6rem; 
+      }
     }
   </style>
 </head>
