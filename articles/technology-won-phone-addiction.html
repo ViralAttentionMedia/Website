@@ -6,46 +6,38 @@
   
   <!-- === SEO DOMINATION HEAD SECTION === -->
   
-  <!-- Primary SEO Title: High CTR + exact-match keywords -->
   <title>Technology Won: How the “Don’t Stare at Screens” Generation Became Phone Addicts</title>
   
-  <!-- Meta Description: Keyword-packed, emotional, curiosity-driven, 155–160 chars -->
   <meta name="description" content="The generation that warned us screens would rot our brains now stares at phones the most. Elderly people in waiting rooms resting devices on their stomachs—ironic addiction exposed."/>
   
-  <!-- Open Graph & Twitter Cards – optimized for viral sharing & CTR -->
   <meta property="og:title" content="Technology Won – The “Don’t Stare at Screens” Generation Is Now Addicted"/>
   <meta property="og:description" content="They told us screens would wreck our eyes and rot our brains. Now seniors average more phone time than Gen Z. The ultimate hypocrisy in doctor waiting rooms."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/> <!-- Replace with your actual waiting-room / phone-on-belly image -->
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0064.jpeg"/>
   <meta property="og:url" content="https://viralatattentionmedia.com/articles/technology-won-phone-addiction.html"/>
   <meta property="og:type" content="article"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="How the Anti-Screen Generation Became the Most Phone-Addicted"/>
   <meta name="twitter:description" content="Irony: Boomers who said “go play outside” now rest phones on their stomachs in waiting rooms. Tech won."/>
-  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0064.jpeg"/>
   
-  <!-- Canonical -->
   <link rel="canonical" href="https://viralatattentionmedia.com/articles/technology-won-phone-addiction.html"/>
   
-  <!-- Preload featured image for fast LCP (Core Web Vitals boost) -->
-  <link rel="preload" as="image" href="/IMG_0056.jpeg" fetchpriority="high"/>
+  <link rel="preload" as="image" href="/IMG_0064.jpeg" fetchpriority="high"/>
   
-  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
-  <!-- Robots & rich results permission -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   
-  <!-- Structured Data: Article + Breadcrumb + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Technology Won: How the “Don’t Stare at Screens” Generation Became the Most Addicted of All",
     "description": "The same people who warned screens would ruin our eyes and brains now spend more time on phones than anyone. Waiting-room hypocrisy exposed.",
-    "image": "https://viralatattentionmedia.com/IMG_0056.jpeg",
+    "image": "https://viralatattentionmedia.com/IMG_0064.jpeg",
     "datePublished": "2026-01-22T17:00:00-07:00",
     "dateModified": "2026-01-22T17:00:00-07:00",
     "author": {
@@ -94,7 +86,6 @@
   }
   </script>
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
@@ -204,18 +195,22 @@
     .article-img-container {
       margin: 1.5rem 0 4rem;
       text-align: center;
-    }
-    .article-img {
-      max-width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: contain;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;          /* Forces a nice wide crop – change to 4/3 or 3/2 if preferred */
+      max-height: 500px;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .article-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;   /* Crops ~top 1/3 – adjust to 30% or 40% if needed */
+      display: block;
       transition: transform 0.3s;
     }
     .article-img:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
     .article-content p {
       margin-bottom: 1.6rem;
@@ -272,10 +267,9 @@
     <div class="article-img-container">
       <img 
         src="/IMG_0064.jpeg" 
-        alt="Elderly people in doctor's waiting room staring at phones resting on stomachs" 
+        alt="Elderly people in doctor's waiting room staring at phones resting on stomachs – cropped to focus on subjects" 
         class="article-img"
         loading="lazy"
-        onclick="window.open(this.src, '_blank');"
       >
     </div>
 
