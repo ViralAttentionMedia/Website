@@ -2,16 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  
+  <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
+  
   <title>Privacy Policy - Viral Attention Media</title>
   
-  <meta name="description" content="Privacy Policy for Viral Attention Media – how we handle visitor information on our independent media site." />
-  <link rel="canonical" href="https://viralatattentionmedia.com/privacy.html" />
+  <meta name="description" content="Privacy Policy for Viral Attention Media – how we handle visitor information on our independent media site delivering unfiltered exposés and critiques."/>
+  
+  <meta property="og:title" content="Privacy Policy – Viral Attention Media"/>
+  <meta property="og:description" content="How Viral Attention Media collects (or doesn't collect) your data while delivering raw, unfiltered stories and exposés."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/> <!-- fallback image; change if you have a better one -->
+  <meta property="og:url" content="https://viralatattentionmedia.com/privacy.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Viral Attention Media"/>
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Privacy Policy – Viral Attention Media"/>
+  <meta name="twitter:description" content="Details on data handling for our independent media platform focused on hard-hitting critiques and exposés."/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
+  
+  <link rel="canonical" href="https://viralatattentionmedia.com/privacy.html"/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "url": "https://viralatattentionmedia.com/privacy.html",
+    "description": "Privacy Policy explaining data collection practices (or lack thereof) on Viral Attention Media.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Viral Attention Media",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://viralatattentionmedia.com/logo.png"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viralatattentionmedia.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://viralatattentionmedia.com/privacy.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -34,87 +92,195 @@
     }
     
     * { margin:0; padding:0; box-sizing:border-box; }
+    
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
-      padding: 0;
-      margin: 0;
+      line-height: 1.75;
       transition: background 0.4s, color 0.4s;
     }
+    
+    header, main, footer {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
     header {
       position: fixed;
       top: 0;
       width: 100%;
+      z-index: 100;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      z-index: 100;
-      transition: background 0.4s, border-color 0.4s;
     }
     nav {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 1rem 5%;
+      padding: 0.9rem 5%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
     }
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
-      font-size: 2rem;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      letter-spacing: -0.04em;
       color: var(--accent);
-      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+      text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
       text-decoration: none;
+      transition: transform 0.3s;
+      text-align: center;
+      max-width: 100%;
+      overflow: hidden;
     }
+    .logo:hover { transform: scale(1.05); }
+    
+    .nav-links-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    
     .theme-toggle {
       background: none;
       border: none;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       cursor: pointer;
       color: var(--text-muted);
-      transition: color 0.3s;
     }
-    .theme-toggle:hover {
-      color: var(--accent);
-    }
+    
     main {
+      padding-top: 12rem;
       max-width: 900px;
       margin: 0 auto;
-      padding: 140px 5% 60px;
+      padding-left: 5%;
+      padding-right: 5%;
     }
-    h1, h2 {
+    h1 {
       font-family: 'Playfair Display', serif;
-      margin-bottom: 1.2rem;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      text-align: center;
     }
-    h1 { font-size: 3rem; color: var(--accent); }
-    h2 { font-size: 2.2rem; margin-top: 3rem; }
-    p, li { margin-bottom: 1.2rem; color: var(--text); }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      margin: 3.5rem 0 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li {
+      margin-bottom: 1.6rem;
+      font-size: 1.125rem;
+      line-height: 1.8;
+    }
     a { color: var(--primary); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .last-updated {
+      text-align: center;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+    
     footer {
       text-align: center;
-      padding: 3rem 5% 2rem;
+      padding: 4rem 5% 2.5rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
-      transition: border-color 0.4s;
+      margin-top: 6rem;
     }
-    .last-updated { font-style: italic; color: var(--text-muted); margin-bottom: 2rem; }
     
     @media (max-width: 768px) {
-      main { padding-top: 160px; }
-      h1 { font-size: 2.5rem; }
-      nav { padding: 1rem 4%; }
+      main { padding-top: 11rem; }
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        width: 100%;
+      }
+      .theme-toggle {
+        order: -1;
+      }
+      .nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 0.9rem 4%;
+      }
+      h1 {
+        font-size: clamp(2.4rem, 8vw, 3.8rem);
+      }
+      .nav-links-container {
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+      }
+      .logo {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="/" class="logo">Viral Attention Media</a>
-      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+      
+      <div class="nav-links-container">
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        
+        <div class="nav-links">
+          <a href="/interviewarchive.html">Interviews</a>
+          <a href="/articlearchive.html">Articles</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -180,10 +346,9 @@
 
   <footer>
     <p>© 2026 Viral Attention Media. All rights reserved.</p>
-    <p style="margin-top:0.8rem;">
-      <a href="/">Home</a> •
-      <a href="/privacy.html">Privacy</a> •
-      <a href="/terms.html" style="margin-left:1rem;">Terms</a>
+    <p style="margin-top:0.6rem;">
+      <a href="privacy.html" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
+      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
     </p>
   </footer>
 
@@ -191,16 +356,12 @@
     const toggle = document.querySelector('.theme-toggle');
     const html = document.documentElement;
 
-    // Set initial theme based on localStorage or system preference
     if (localStorage.getItem('theme') === 'dark' ||
         (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       html.setAttribute('data-theme', 'dark');
       toggle.textContent = '🌙';
-    } else {
-      toggle.textContent = '☀️';
     }
 
-    // Toggle theme on click
     toggle.addEventListener('click', () => {
       if (html.getAttribute('data-theme') === 'dark') {
         html.removeAttribute('data-theme');
