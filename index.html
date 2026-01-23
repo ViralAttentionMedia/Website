@@ -283,6 +283,15 @@
       border-bottom: 1px solid var(--border);
     }
     
+    /* Special rule for the interviews placeholder to show full image */
+    .interviews-placeholder .archive-img {
+      height: auto;
+      max-height: 400px;          /* ← adjust this value higher if still cropped, or remove entirely */
+      object-fit: contain;        /* ← key change: shows entire image without cropping */
+      object-position: center;
+      background: var(--card-bg);
+    }
+    
     .archive-card:hover .archive-img {
       transform: scale(1.03);
     }
@@ -337,6 +346,9 @@
         max-height: 450px; 
         object-position: center 78%;
       }
+      .interviews-placeholder .archive-img {
+        max-height: 350px;        /* smaller on mobile if needed */
+      }
       .nav-links-container {
         display: flex;
         align-items: center;
@@ -369,6 +381,9 @@
       .featured-card .archive-img { 
         max-height: 400px; 
         object-position: center bottom 8%;
+      }
+      .interviews-placeholder .archive-img {
+        max-height: 300px;
       }
       .nav-links-container {
         gap: 0.8rem;
@@ -453,8 +468,8 @@
     <section id="interviews">
       <h2 class="section-title">Latest Interviews</h2>
       <div class="content-grid">
-        <div class="archive-card">
-          <img src="/IMG_0039.jpeg" alt="Interviews in progress. Stay tuned." class="archive-img">
+        <div class="archive-card interviews-placeholder">
+          <img src="/IMG_0039.jpeg" alt="Interviews in progress. Stay tuned for powerful conversations" class="archive-img">
           <div class="archive-body">
             <div class="archive-category">COMING SOON</div>
             <h3 class="archive-title">Interviews in Progress – Stay Tuned</h3>
