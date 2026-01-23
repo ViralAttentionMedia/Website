@@ -6,16 +6,13 @@
   
   <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
   
-  <!-- Optimized Title: Keyword-rich, emotional, ~55–60 chars -->
   <title>Viral Attention Media: Unfiltered Exposés & Rage-Inducing Truths</title>
   
-  <!-- Meta Description: Freshness + newest article keywords, ~155–160 chars -->
   <meta name="description" content="Viral Attention Media delivers raw exposés, hard-hitting critiques, and unfiltered stories that spark outrage. Latest: Retractable dog leashes exposed as total disaster. Phoenix independent journalism."/>
   
-  <!-- Open Graph & Twitter Cards – rich previews, featuring newest article -->
   <meta property="og:title" content="Viral Attention Media – Stories That Cut Through the Noise"/>
   <meta property="og:description" content="Explosive exposés on corrupt systems, predatory practices, and everyday rage. Newest: Retractable dog leashes are dangerous chaos. Independent media from Phoenix."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/> <!-- Newest featured image -->
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   <meta property="og:url" content="https://viralatattentionmedia.com/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
@@ -24,21 +21,16 @@
   <meta name="twitter:description" content="Raw exposés, critiques, and stories that matter. Latest rant: Retractable dog leashes are dangerous chaos."/>
   <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   
-  <!-- Canonical -->
   <link rel="canonical" href="https://viralatattentionmedia.com/"/>
   
-  <!-- Preload newest featured/hero image for fast LCP -->
   <link rel="preload" as="image" href="/IMG_0056.jpeg" fetchpriority="high"/>
   
-  <!-- Preconnect & preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
-  <!-- Robots: Full indexing + rich snippets -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   
-  <!-- Structured Data: WebSite + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,7 +61,6 @@
   }
   </script>
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
@@ -81,6 +72,7 @@
       --primary-dark: #0044cc;
       --border: #e5e5e5;
       --card-bg: #f9f9f9;
+      --accent: #00ffff;
     }
     [data-theme="dark"] {
       --bg: #0f0f0f;
@@ -112,7 +104,14 @@
     nav {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0.8rem 5%;
+      padding: 0.9rem 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-top {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -120,39 +119,43 @@
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
-      font-size: 1.8rem;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
       letter-spacing: -0.04em;
-      color: #00ffff;
+      color: var(--accent);
       text-shadow: 
         -2px -2px 0 #000,  
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000;
       text-decoration: none;
-      white-space: nowrap;
       transition: transform 0.3s;
     }
-    .logo:hover {
-      transform: scale(1.05);
+    .logo:hover { transform: scale(1.05); }
+    
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
     }
     .nav-links a {
-      margin-left: 1.8rem;
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 0.95rem;
       transition: color 0.25s;
     }
     .nav-links a:hover { color: var(--primary); }
+    
     .theme-toggle {
       background: none;
       border: none;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       cursor: pointer;
       color: var(--text-muted);
     }
     
-    main { padding-top: 8rem; }
+    main { padding-top: 9rem; }
     .hero {
       position: relative;
       text-align: center;
@@ -181,7 +184,7 @@
       font-size: clamp(3rem, 7vw, 5.5rem);
       margin-bottom: 1.2rem;
       line-height: 1.1;
-      color: #00ffff;
+      color: var(--accent);
       text-shadow: 0 0 20px rgba(0,255,255,0.7);
     }
     .hero p {
@@ -193,14 +196,13 @@
     .cta-btn {
       display: inline-block;
       padding: 1rem 2.5rem;
-      background: linear-gradient(135deg, #00ffff, #ff00ff);
+      background: linear-gradient(135deg, var(--accent), #ff00ff);
       color: #000;
       text-decoration: none;
       font-weight: 700;
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0,255,255,0.6);
       transition: all 0.3s;
-      cursor: pointer;
     }
     .cta-btn:hover {
       transform: translateY(-4px) scale(1.05);
@@ -237,7 +239,6 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
     
-    /* Standard card images */
     .card-img {
       width: 100%;
       height: 320px;
@@ -247,12 +248,11 @@
       transition: transform 0.4s;
     }
     
-    /* Featured card (newest article) – identical to articlearchive.html */
     .featured-card .card-img {
       height: auto;
       max-height: 520px;
       object-fit: cover;
-      object-position: center 65%; /* Lower focus: heads near top, full dogs at bottom */
+      object-position: center 65%;
       background: var(--card-bg);
       padding: 0;
       border-bottom: 1px solid var(--border);
@@ -288,7 +288,6 @@
       margin-top: 1.2rem;
     }
     
-    /* Placeholder interviews card */
     .placeholder-card .card-img {
       height: 320px;
       object-fit: cover;
@@ -296,10 +295,20 @@
     }
     
     @media (max-width: 768px) {
-      .nav-links { display: none; }
+      .nav-top {
+        justify-content: space-between;
+      }
+      .nav-links {
+        display: flex !important;          /* Force show on mobile */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
       .hero { padding: 10rem 5% 12rem; }
       .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
-      .logo { font-size: 1.6rem; }
+      .logo { font-size: clamp(1.8rem, 6vw, 2.2rem); }
       
       .card-img {
         height: auto;
@@ -311,7 +320,7 @@
       
       .featured-card .card-img {
         max-height: 450px;
-        object-position: center 60%; /* Adjusted lower focus on mobile */
+        object-position: center 60%;
       }
       
       .placeholder-card .card-img {
@@ -323,6 +332,10 @@
     }
     
     @media (max-width: 480px) {
+      .nav-links {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+      }
       .featured-card .card-img {
         max-height: 400px;
         object-position: center 55%;
@@ -334,7 +347,10 @@
 
   <header>
     <nav aria-label="Main navigation">
-      <a href="/" class="logo">Viral Attention Media</a>
+      <div class="nav-top">
+        <a href="/" class="logo">Viral Attention Media</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+      </div>
       
       <div class="nav-links">
         <a href="#interviews">Interviews</a>
@@ -342,8 +358,6 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      
-      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
     </nav>
   </header>
 
