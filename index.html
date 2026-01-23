@@ -110,13 +110,6 @@
       align-items: center;
       gap: 0.5rem;
     }
-    .nav-top {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
@@ -134,22 +127,18 @@
     }
     .logo:hover { transform: scale(1.05); }
     
-    .theme-toggle {
-      background: none;
-      border: none;
-      font-size: 1.4rem;
-      cursor: pointer;
-      color: var(--text-muted);
-      position: absolute;
-      right: 0;
+    .nav-links-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
-    
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.2rem;
-      margin-top: 0.4rem;
     }
     .nav-links a {
       color: var(--text);
@@ -159,6 +148,14 @@
       transition: color 0.25s;
     }
     .nav-links a:hover { color: var(--primary); }
+    
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
     
     main { padding-top: 9rem; }
     .hero {
@@ -302,15 +299,22 @@
     @media (max-width: 768px) {
       .nav-top {
         justify-content: center;
-        position: relative;
       }
       .logo {
         text-align: center;
         font-size: clamp(2rem, 7vw, 2.6rem);
       }
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        width: 100%;
+      }
       .theme-toggle {
-        position: absolute;
-        right: 0;
+        order: -1; /* Moves toggle to left of links */
       }
       .nav-links {
         display: flex !important;
@@ -318,8 +322,6 @@
         justify-content: center;
         gap: 1rem 1.5rem;
         font-size: 0.9rem;
-        margin-top: 0.6rem;
-        width: 100%;
       }
       .hero { padding: 10rem 5% 12rem; }
       .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
@@ -346,6 +348,9 @@
     }
     
     @media (max-width: 480px) {
+      .nav-links-container {
+        gap: 0.8rem;
+      }
       .nav-links {
         gap: 0.8rem 1.2rem;
         font-size: 0.85rem;
@@ -361,16 +366,17 @@
 
   <header>
     <nav aria-label="Main navigation">
-      <div class="nav-top">
-        <a href="/" class="logo">Viral Attention Media</a>
-        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-      </div>
+      <a href="/" class="logo">Viral Attention Media</a>
       
-      <div class="nav-links">
-        <a href="#interviews">Interviews</a>
-        <a href="articlearchive.html">Articles</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <div class="nav-links-container">
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        
+        <div class="nav-links">
+          <a href="#interviews">Interviews</a>
+          <a href="articlearchive.html">Articles</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </div>
     </nav>
   </header>
