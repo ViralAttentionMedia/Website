@@ -214,6 +214,28 @@
       margin-top: 6rem;
     }
     
+    /* CTA styles (copied from articlearchive for consistency) */
+    .section {
+      margin-bottom: 5rem;
+    }
+    
+    .cta {
+      display: inline-block;
+      padding: 1rem 2.3rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.25s;
+      margin-top: 2rem;
+    }
+    
+    .cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
     @media (max-width: 768px) {
       main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
@@ -302,6 +324,11 @@
       <p>If you're tired of sanitized news and want journalism that actually fights for attention instead of begging for it — you're in the right place.</p>
       
       <p><strong>Welcome to Viral Attention Media.</strong> Stories that cut through the noise — whether you like it or not.</p>
+    </div>
+
+    <!-- Added: Back to Stories CTA button, matching articlearchive.html -->
+    <div class="section" style="text-align:center;">
+      <a href="/" class="cta">Back to Stories</a>
     </div>
   </main>
 
