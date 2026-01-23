@@ -196,8 +196,8 @@
       margin: 1.5rem 0 4rem;
       text-align: center;
       overflow: hidden;
-      aspect-ratio: 16 / 9;          /* Forces a nice wide crop – change to 4/3 or 3/2 if preferred */
-      max-height: 500px;
+      aspect-ratio: 16 / 9;
+      max-height: 520px;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
@@ -205,7 +205,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 35%;   /* Crops ~top 1/3 – adjust to 30% or 40% if needed */
+      object-position: center 68%;      /* Desktop: cuts top ~32%, keeps full people head-to-toe */
       display: block;
       transition: transform 0.3s;
     }
@@ -242,6 +242,26 @@
       color: var(--text-muted);
       border-top: 1px solid var(--border);
     }
+
+    /* Mobile: taller container + stronger bottom focus so phones/stomachs/feet are never cut off */
+    @media (max-width: 768px) {
+      .article-img-container {
+        aspect-ratio: 4 / 3;          /* Gives more vertical space on phones */
+        max-height: 480px;
+      }
+      .article-img {
+        object-position: center 78%;   /* Crops more from top – full heads-to-feet visible */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .article-img-container {
+        max-height: 420px;
+      }
+      .article-img {
+        object-position: center bottom 8%;   /* Locks bottom (feet + stomachs/phones) in frame on small screens */
+      }
+    }
   </style>
 </head>
 <body>
@@ -267,7 +287,7 @@
     <div class="article-img-container">
       <img 
         src="/IMG_0064.jpeg" 
-        alt="Elderly people in doctor's waiting room staring at phones resting on stomachs – cropped to focus on subjects" 
+        alt="Elderly people in doctor's waiting room staring at phones resting on stomachs – full head-to-toe view" 
         class="article-img"
         loading="lazy"
       >
