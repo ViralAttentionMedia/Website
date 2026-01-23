@@ -6,13 +6,10 @@
   
   <!-- === SEO DOMINATION HEAD SECTION === -->
   
-  <!-- Primary SEO Title: High CTR + exact-match keywords -->
   <title>Retractable Dog Leashes Are a Total Disaster: The Inventor Deserves a Punch in the Face</title>
   
-  <!-- Meta Description: Keyword-packed, emotional, curiosity-driven, 155–160 chars -->
   <meta name="description" content="Retractable dog leashes cause injuries, rope burns, neck trauma, tangles, and chaos on every walk. Why Mary Delaney's 1908 invention is the worst thing for dogs and owners—and why users might be the problem."/>
   
-  <!-- Open Graph & Twitter Cards – optimized for viral sharing -->
   <meta property="og:title" content="Retractable Dog Leashes Are a Total Disaster – Inventor Deserves a Punch"/>
   <meta property="og:description" content="Burns, broken fingers, tracheal damage, endless tangles—retractable leashes are dangerous garbage. A furious rant on why Mary Delaney ruined dog walks forever."/>
   <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
@@ -24,21 +21,16 @@
   <meta name="twitter:description" content="Injuries, pulling problems, tangles, and reckless owners. Why retractable dog leashes are the worst invention ever."/>
   <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   
-  <!-- Canonical -->
   <link rel="canonical" href="https://viralatattentionmedia.com/articles/retractable-dog-leash-disaster.html"/>
   
-  <!-- Preload featured image for fast LCP (Core Web Vitals) -->
   <link rel="preload" as="image" href="/IMG_0056.jpeg" fetchpriority="high"/>
   
-  <!-- Fonts & performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
-  <!-- Robots & rich results permission -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
   
-  <!-- Structured Data: Article + Breadcrumb + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,7 +85,6 @@
   }
   </script>
 
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
@@ -104,6 +95,8 @@
       --primary: #0066ff;
       --primary-dark: #0044cc;
       --border: #e5e5e5;
+      --card-bg: #f9f9f9;
+      --accent: #00ffff;
     }
     [data-theme="dark"] {
       --bg: #0f0f0f;
@@ -112,9 +105,18 @@
       --primary: #4d9aff;
       --primary-dark: #2e7aff;
       --border: #333333;
+      --card-bg: #1a1a1a;
     }
     
     * { margin:0; padding:0; box-sizing:border-box; }
+    
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
@@ -122,6 +124,12 @@
       line-height: 1.75;
       transition: background 0.4s, color 0.4s;
     }
+    
+    header, main, footer {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
     header {
       position: fixed;
       top: 0;
@@ -135,29 +143,43 @@
       margin: 0 auto;
       padding: 0.9rem 5%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
     }
     .logo {
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 900;
-      font-size: clamp(1.6rem, 4.5vw, 2rem);
-      letter-spacing: -0.03em;
-      color: #00ffff;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      letter-spacing: -0.04em;
+      color: var(--accent);
       text-shadow: 
         -2px -2px 0 #000,  
          2px -2px 0 #000,
         -2px  2px 0 #000,
          2px  2px 0 #000;
       text-decoration: none;
-      white-space: nowrap;
       transition: transform 0.3s;
+      text-align: center;
+      max-width: 100%;
+      overflow: hidden;
     }
-    .logo:hover {
-      transform: scale(1.03);
+    .logo:hover { transform: scale(1.05); }
+    
+    .nav-links-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
     }
     .nav-links a {
-      margin-left: 1.6rem;
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
@@ -165,38 +187,37 @@
       transition: color 0.25s;
     }
     .nav-links a:hover { color: var(--primary); }
+    
     .theme-toggle {
       background: none;
       border: none;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       cursor: pointer;
       color: var(--text-muted);
     }
     
     main {
-      padding-top: 9rem;
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 2rem 5% 6rem;
+      padding-top: 12rem;
     }
     .article-header {
       text-align: center;
-      padding: 6rem 5% 2rem;
+      padding: 5rem 5% 2.5rem;
       background: linear-gradient(135deg, rgba(0,102,255,0.07) 0%, transparent 60%);
     }
     .article-header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      margin-bottom: 1rem;
-      line-height: 1.15;
-      color: var(--text);
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      margin-bottom: 0.8rem;
     }
     .meta {
       font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .article-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 5% 6rem;
       font-size: 1.125rem;
       line-height: 1.8;
     }
@@ -246,6 +267,52 @@
       color: var(--text-muted);
       border-top: 1px solid var(--border);
     }
+    
+    @media (max-width: 768px) {
+      main { padding-top: 11rem; }
+      .article-header { padding: 4rem 5% 2rem; }
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        width: 100%;
+      }
+      .theme-toggle {
+        order: -1; /* Moves toggle to left of links */
+      }
+      .nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 0.9rem 4%;
+      }
+      .article-content {
+        padding: 0 4% 6rem;
+      }
+      .article-header h1 {
+        font-size: clamp(2.4rem, 8vw, 3.8rem);
+      }
+      .nav-links-container {
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+      }
+      .logo {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+      }
+    }
   </style>
 </head>
 <body>
@@ -254,11 +321,16 @@
     <nav aria-label="Main navigation">
       <a href="/" class="logo">Viral Attention Media</a>
       
-      <div class="nav-links">
-        <a href="/">Home</a>
+      <div class="nav-links-container">
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        
+        <div class="nav-links">
+          <a href="/interviewarchive.html">Interviews</a>
+          <a href="/articlearchive.html">Articles</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </div>
       </div>
-      
-      <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
     </nav>
   </header>
 
