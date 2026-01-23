@@ -6,24 +6,22 @@
   
   <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
   
-  <title>About Viral Attention Media – Independent Journalism & Unfiltered Stories</title>
+  <title>About Viral Attention Media – Unfiltered, Fearless Independent Journalism from Phoenix</title>
   
-  <meta name="description" content="About Viral Attention Media: Phoenix-based independent outlet delivering raw interviews, explosive exposés, fearless critiques, and stories that cut through the mainstream noise. No filter, no corporate leash."/>
+  <meta name="description" content="Viral Attention Media is an independent, no-filter media outlet based in Phoenix, Arizona. We deliver raw exposés, sharp critiques, and stories that cut through the mainstream noise."/>
   
-  <meta property="og:title" content="About Viral Attention Media – Fearless Independent Journalism"/>
-  <meta property="og:description" content="Phoenix-based independent media founded in 2026. Unfiltered interviews, hard-hitting exposés, and stories that matter. No corporate backing. No sacred cows."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/>
+  <meta property="og:title" content="About Viral Attention Media"/>
+  <meta property="og:description" content="Phoenix-based independent media focused on unfiltered truth, hard-hitting exposés, and stories built to spark outrage and real conversation."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/> <!-- or use a better about-specific image if you have one -->
   <meta property="og:url" content="https://viralatattentionmedia.com/about.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="About Viral Attention Media – Unfiltered & Fearless"/>
-  <meta name="twitter:description" content="Independent journalism from Phoenix. Raw interviews, exposés, and stories that cut through the noise."/>
-  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0021.jpeg"/>
+  <meta name="twitter:title" content="About Viral Attention Media"/>
+  <meta name="twitter:description" content="Independent Phoenix journalism: raw, fearless, and unapologetic."/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0056.jpeg"/>
   
   <link rel="canonical" href="https://viralatattentionmedia.com/about.html"/>
-  
-  <link rel="preload" as="image" href="/IMG_0021.jpeg" fetchpriority="high"/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,29 +34,12 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "About Viral Attention Media",
-    "description": "Independent journalism outlet delivering unfiltered interviews, exposés, critiques, and stories that matter. Founded in Phoenix, Arizona in 2026.",
+    "description": "Independent media outlet delivering unfiltered exposés, critiques, and impactful storytelling from Phoenix, Arizona.",
     "url": "https://viralatattentionmedia.com/about.html",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Viral Attention Media",
       "url": "https://viralatattentionmedia.com"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://viralatattentionmedia.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About",
-          "item": "https://viralatattentionmedia.com/about.html"
-        }
-      ]
     }
   }
   </script>
@@ -69,12 +50,7 @@
     "name": "Viral Attention Media",
     "url": "https://viralatattentionmedia.com",
     "logo": "https://viralatattentionmedia.com/logo.png",
-    "description": "Independent media focused on unfiltered interviews, exposés, critiques, and impactful storytelling.",
-    "sameAs": [
-      "https://twitter.com/ViralAttnMedia",
-      "https://facebook.com/ViralAttentionMedia",
-      "https://instagram.com/viralattentionmedia"
-    ]
+    "description": "Phoenix-based independent media focused on raw exposés, critiques, and stories that matter."
   }
   </script>
 
@@ -102,13 +78,22 @@
     }
     
     * { margin:0; padding:0; box-sizing:border-box; }
+    
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.75;
+      line-height: 1.6;
       transition: background 0.4s, color 0.4s;
     }
+    
     header {
       position: fixed;
       top: 0;
@@ -140,6 +125,8 @@
       text-decoration: none;
       transition: transform 0.3s;
       text-align: center;
+      max-width: 100%;
+      overflow: hidden;
     }
     .logo:hover { transform: scale(1.05); }
     
@@ -174,58 +161,49 @@
     }
     
     main {
-      padding-top: 9rem;
-      max-width: 920px;
+      padding-top: 12rem;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 2rem 5% 6rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 6rem;
     }
+    
+    .page-header {
+      text-align: center;
+      padding-bottom: 3.5rem;
+    }
+    
     .page-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-      text-align: center;
-      margin: 0 0 3.5rem;
-      line-height: 1.15;
-      color: var(--text);
-      padding: 0 1rem;
-    }
-    .section {
-      margin-bottom: 5rem;
-    }
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.3rem;
-      margin: 0 0 1.6rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid var(--border);
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
       color: var(--text);
     }
-    p, li {
+    
+    .about-content {
       font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .about-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin: 3rem 0 1.2rem;
+      color: var(--accent);
+    }
+    
+    .about-content p {
       margin-bottom: 1.5rem;
-      color: var(--text);
     }
-    ul {
-      list-style: disc;
-      padding-left: 1.8rem;
-      margin-bottom: 2rem;
-    }
-    li {
-      margin-bottom: 1rem;
-    }
-    .cta {
-      display: inline-block;
-      padding: 1rem 2.3rem;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
+    
+    .highlight {
+      color: var(--primary);
       font-weight: 600;
-      border-radius: 6px;
-      transition: all 0.25s;
-      margin-top: 2rem;
-    }
-    .cta:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
     }
     
     footer {
@@ -233,11 +211,13 @@
       padding: 4rem 5% 2.5rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
+      margin-top: 6rem;
     }
-
+    
     @media (max-width: 768px) {
       main { padding-top: 11rem; }
-      .page-title { font-size: clamp(2rem, 7vw, 3.4rem); padding: 0 0.5rem; }
+      .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
+      .page-header { padding-bottom: 2.5rem; }
       .nav-links-container {
         display: flex;
         align-items: center;
@@ -248,7 +228,7 @@
         width: 100%;
       }
       .theme-toggle {
-        order: -1; /* Moves toggle to left of links */
+        order: -1;
       }
       .nav-links {
         display: flex !important;
@@ -260,12 +240,18 @@
     }
     
     @media (max-width: 480px) {
-      .nav-links-container {
-        gap: 0.8rem;
+      main {
+        padding-left: 4%;
+        padding-right: 4%;
       }
-      .nav-links {
-        gap: 0.8rem 1.2rem;
-        font-size: 0.85rem;
+      nav {
+        padding: 0.9rem 4%;
+      }
+      .about-content {
+        font-size: 1rem;
+      }
+      .logo {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
       }
     }
   </style>
@@ -290,46 +276,40 @@
   </header>
 
   <main>
-    <h1 class="page-title">About Viral Attention Media</h1>
-
-    <div class="section">
-      <p>We started Viral Attention Media because the mainstream media machine has become too comfortable — too polished, too safe, too afraid to call things what they are.</p>
+    <div class="page-header">
+      <h1 class="page-title">About Viral Attention Media</h1>
+    </div>
+    
+    <div class="about-content">
+      <p>We are an <span class="highlight">independent, no-BS media outlet</span> based in Phoenix, Arizona.</p>
       
-      <p>Our mission is simple: cut through the noise. We deliver unfiltered interviews, unflinching analysis, and stories that actually matter — no corporate leash, no advertiser-friendly edits, no sacred cows.</p>
-    </div>
-
-    <div class="section">
-      <h2>What We Believe</h2>
-      <ul>
-        <li><strong>Attention is the new currency</strong> — and we refuse to waste yours on fluff or spin.</li>
-        <li>Journalism should provoke, not pacify. Comfort is the enemy of truth.</li>
-        <li>Power must be questioned, not protected. We name names and follow the money.</li>
-        <li>Fans, athletes, and citizens deserve honesty — not manufactured narratives.</li>
-      </ul>
-    </div>
-
-    <div class="section">
+      <p>At Viral Attention Media, we don't chase clicks with clickbait headlines — we write the headlines that actually deserve attention. Our mission is simple: deliver raw exposés, unfiltered critiques, and stories that cut straight through the corporate media fog.</p>
+      
+      <h2>Why We Exist</h2>
+      <p>Mainstream outlets are too scared, too bought, or too lazy to call things what they are. We aren't. Whether it's predatory banking practices, broken everyday products that ruin lives, corrupt systems that protect the powerful, or cultural rot hiding in plain sight — we name it, we show it, and we don't apologize for making people uncomfortable.</p>
+      
       <h2>What We Cover</h2>
-      <p>Hard-hitting interviews with people who matter. Deep dives into sports, culture, politics, and power. Exposés on corruption, exploitation, and the systems that keep people quiet. Stories that make you think, argue, and maybe even change your mind.</p>
+      <ul>
+        <li>Exposés on systems and companies that exploit everyday people</li>
+        <li>Hard-hitting opinion pieces that say what others won't</li>
+        <li>Coming soon: raw, unedited interviews with people who are actually living the stories</li>
+        <li>Anything that deserves outrage and real conversation</li>
+      </ul>
       
-      <p>We don't do press releases. We don't do safe takes. We do real journalism in an age that desperately needs it.</p>
-    </div>
-
-    <div class="section">
-      <h2>Who We Are</h2>
-      <p>Viral Attention Media is an independent outlet founded in 2026. We operate without corporate backing, billionaire investors, or legacy media baggage. Our only obligation is to the truth — and to you, the reader who still cares enough to pay attention.</p>
-    </div>
-
-    <div class="section" style="text-align:center;">
-      <a href="/" class="cta">Back to Stories</a>
+      <h2>How We're Different</h2>
+      <p>No corporate sponsors. No editorial boards telling us to soften the language. No ads pretending to be content. Just straight talk, real research, and zero tolerance for nonsense.</p>
+      
+      <p>If you're tired of sanitized news and want journalism that actually fights for attention instead of begging for it — you're in the right place.</p>
+      
+      <p><strong>Welcome to Viral Attention Media.</strong> Stories that cut through the noise — whether you like it or not.</p>
     </div>
   </main>
 
   <footer>
     <p>© 2026 Viral Attention Media. All rights reserved.</p>
     <p style="margin-top:0.6rem;">
-      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
-      <a href="#" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
+      <a href="privacy.html" style="color:var(--text-muted); margin:0 1rem;">Privacy</a> •
+      <a href="terms.html" style="color:var(--text-muted); margin:0 1rem;">Terms</a>
     </p>
   </footer>
 
