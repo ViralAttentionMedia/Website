@@ -8,22 +8,22 @@
   
   <title>Viral Attention Media: Unfiltered Exposés & Rage-Inducing Truths</title>
   
-  <meta name="description" content="Viral Attention Media delivers raw exposés, hard-hitting critiques, and unfiltered stories that spark outrage. Latest: Planting Trees & Food Along Highways – A bold move for food security. Phoenix independent journalism."/>
+  <meta name="description" content="Viral Attention Media delivers raw exposés, hard-hitting critiques, and unfiltered stories that spark outrage. Latest: Planting Trees & Food Along Highways – A bold move for food security and sustainability. Phoenix independent journalism."/>
   
   <meta property="og:title" content="Viral Attention Media – Stories That Cut Through the Noise"/>
-  <meta property="og:description" content="Explosive exposés on corrupt systems, predatory practices, and everyday rage. Newest: Planting Trees & Food Along Highways could transform America. Independent media from Phoenix."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0060.jpeg"/> <!-- Update if you have a specific image for this article -->
+  <meta property="og:description" content="Explosive exposés on corrupt systems, predatory practices, and game-changing ideas. Newest: Planting Trees & Food Along Highways could transform America’s food future. Independent media from Phoenix."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0060.jpeg"/> <!-- Replace with actual featured image if different -->
   <meta property="og:url" content="https://viralatattentionmedia.com/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Viral Attention Media – Unfiltered & Fearless"/>
-  <meta name="twitter:description" content="Raw exposés, critiques, and stories that matter. Latest: Planting Trees & Food Along Highways initiative."/>
-  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0060.jpeg"/> <!-- Update if needed -->
+  <meta name="twitter:description" content="Raw exposés, critiques, and bold ideas. Latest: Planting Trees & Food Along Highways – feeding the future one mile at a time."/>
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0060.jpeg"/> <!-- Replace with actual featured image if different -->
   
   <link rel="canonical" href="https://viralatattentionmedia.com/"/>
   
-  <link rel="preload" as="image" href="/IMG_0060.jpeg" fetchpriority="high"/> <!-- Adjust to your actual featured image -->
+  <link rel="preload" as="image" href="/IMG_0060.jpeg" fetchpriority="high"/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +64,342 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
   <style>
-    /* Existing styles unchanged – omitted for brevity in this response */
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --text-muted: #555555;
+      --primary: #0066ff;
+      --primary-dark: #0044cc;
+      --border: #e5e5e5;
+      --card-bg: #f9f9f9;
+      --accent: #00ffff;
+    }
+    [data-theme="dark"] {
+      --bg: #0f0f0f;
+      --text: #f0f0f0;
+      --text-muted: #aaaaaa;
+      --primary: #4d9aff;
+      --primary-dark: #2e7aff;
+      --border: #333333;
+      --card-bg: #1a1a1a;
+    }
+    
+    * { margin:0; padding:0; box-sizing:border-box; }
+    
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+      scroll-behavior: smooth;
+    }
+    
+    header, main, footer, .content-grid {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.9rem 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      letter-spacing: -0.04em;
+      color: var(--accent);
+      text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+      text-decoration: none;
+      transition: transform 0.3s;
+      text-align: center;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .logo:hover { transform: scale(1.05); }
+    
+    .nav-links-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+    
+    main { padding-top: 9rem; }
+    
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 12rem 5% 14rem;
+      background-image: url('/IMG_0021.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%);
+      z-index: 1;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      margin-bottom: 1.2rem;
+      line-height: 1.1;
+      color: var(--accent);
+      text-shadow: 0 0 20px rgba(0,255,255,0.7);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      color: #e0ffff;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, var(--accent), #ff00ff);
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.6);
+      transition: all 0.3s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 0 30px rgba(0,255,255,0.8);
+    }
+    
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin: 5rem auto 3.5rem;
+      max-width: 720px;
+    }
+    
+    .content-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.8rem;
+    }
+    
+    .archive-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      max-width: 100%;
+    }
+    
+    .archive-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    
+    .archive-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+      background: #333;
+      transition: transform 0.4s;
+      display: block;
+      max-width: 100%;
+    }
+    
+    .featured-card .archive-img {
+      height: auto;
+      max-height: 520px;
+      object-fit: cover;
+      object-position: center 68%;
+      background: var(--card-bg);
+      padding: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    /* Special rule for the interviews placeholder to show full image */
+    .interviews-placeholder .archive-img {
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      object-position: center;
+      background: var(--card-bg);
+    }
+    
+    .archive-card:hover .archive-img {
+      transform: scale(1.03);
+    }
+    
+    .archive-body {
+      padding: 1.8rem;
+    }
+    
+    .archive-category {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.6rem;
+    }
+    
+    .archive-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+    }
+    
+    .archive-card:hover .archive-title {
+      text-decoration: underline;
+    }
+    
+    .archive-meta {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 4rem 5% 2.5rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 6rem;
+    }
+    
+    @media (max-width: 768px) {
+      main { padding-top: 11rem; }
+      .hero { padding: 10rem 5% 12rem; }
+      .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
+      .content-grid { 
+        padding: 0 5%; 
+        gap: 2.2rem; 
+      }
+      .featured-card .archive-img { 
+        max-height: 450px; 
+        object-position: center 78%;
+      }
+      .interviews-placeholder .archive-img {
+        max-height: 350px;
+      }
+      .nav-links-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        margin-top: 0.6rem;
+        width: 100%;
+      }
+      .theme-toggle {
+        order: -1;
+      }
+      .nav-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .content-grid {
+        padding: 0 4%;
+      }
+      nav {
+        padding: 0.9rem 4%;
+      }
+      .archive-body { padding: 1.4rem; }
+      .featured-card .archive-img { 
+        max-height: 400px; 
+        object-position: center bottom 8%;
+      }
+      .interviews-placeholder .archive-img {
+        max-height: 300px;
+      }
+      .nav-links-container {
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+      }
+      .logo {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+      }
+      .section-title {
+        font-size: 2.4rem;
+        margin: 3rem auto 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -99,11 +434,11 @@
 
         <!-- 1. NEWEST ARTICLE – TOP SPOT (featured) -->
         <a href="articles/planting-trees-food-highways.html" class="archive-card featured-card">
-          <img src="/IMG_0060.jpeg" alt="Trees and edible plants along a highway for food security" class="archive-img"> <!-- Replace with your actual image filename -->
+          <img src="/IMG_0060.jpeg" alt="Edible landscaping along highways – trees, fruit, and food security" class="archive-img">
           <div class="archive-body">
             <div class="archive-category">INNOVATION</div>
             <h3 class="archive-title">Planting Trees & Food Along Highways: A Game-Changer for Food Security and Sustainability</h3>
-            <p class="archive-meta">January 27, 2026 • ~8 min read</p> <!-- Adjust date/read time as needed -->
+            <p class="archive-meta">January 27, 2026 • ~8 min read</p>
           </div>
         </a>
 
