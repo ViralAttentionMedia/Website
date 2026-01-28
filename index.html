@@ -4,26 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   
-  <!-- === SEO DOMINATION UPDATES – ALL INVISIBLE TO USERS === -->
+  <!-- === SEO === -->
   
   <title>Viral Attention Media: Unfiltered Exposés & Rage-Inducing Truths</title>
   
-  <meta name="description" content="Viral Attention Media delivers raw exposés, hard-hitting critiques, and unfiltered stories that spark outrage. Latest: Planting Trees & Food Along Highways – A bold move for food security and sustainability. Phoenix independent journalism."/>
+  <meta name="description" content="Viral Attention Media delivers raw exposés, hard-hitting critiques, and unfiltered stories that spark outrage. Latest: Planting Trees & Food Along Highways – A bold move for food security and sustainability."/>
   
   <meta property="og:title" content="Viral Attention Media – Stories That Cut Through the Noise"/>
-  <meta property="og:description" content="Explosive exposés on corrupt systems, predatory practices, and game-changing ideas. Newest: Planting Trees & Food Along Highways could transform America’s food future. Independent media from Phoenix."/>
-  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0060.jpeg"/> <!-- Replace with actual featured image if different -->
+  <meta property="og:description" content="Explosive exposés on corrupt systems, predatory practices, and game-changing ideas. Newest: Planting Trees & Food Along Highways could transform food security."/>
+  <meta property="og:image" content="https://viralatattentionmedia.com/IMG_0071.jpeg"/>
   <meta property="og:url" content="https://viralatattentionmedia.com/"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Viral Attention Media"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Viral Attention Media – Unfiltered & Fearless"/>
   <meta name="twitter:description" content="Raw exposés, critiques, and bold ideas. Latest: Planting Trees & Food Along Highways – feeding the future one mile at a time."/>
-  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0060.jpeg"/> <!-- Replace with actual featured image if different -->
+  <meta name="twitter:image" content="https://viralatattentionmedia.com/IMG_0071.jpeg"/>
   
   <link rel="canonical" href="https://viralatattentionmedia.com/"/>
   
-  <link rel="preload" as="image" href="/IMG_0060.jpeg" fetchpriority="high"/>
+  <link rel="preload" as="image" href="/IMG_0071.jpeg" fetchpriority="high"/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
     "name": "Viral Attention Media",
     "url": "https://viralatattentionmedia.com",
     "logo": "https://viralatattentionmedia.com/logo.png",
-    "description": "Phoenix-based independent media focused on unfiltered exposés, critiques, and impactful storytelling.",
+    "description": "Independent media focused on unfiltered exposés, critiques, and impactful storytelling.",
     "sameAs": [
       "https://twitter.com/ViralAttnMedia",
       "https://facebook.com/ViralAttentionMedia",
@@ -237,12 +237,12 @@
     }
     
     .content-grid {
-      max-width: 1400px;
+      max-width: 900px;               /* narrower max width for cleaner single column feel */
       margin: 0 auto;
       padding: 0 5%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.8rem;
+      grid-template-columns: 1fr;     /* ONE COLUMN on all screens */
+      gap: 3.2rem;                    /* bigger gap for breathing room on iPad/mobile */
     }
     
     .archive-card {
@@ -254,7 +254,6 @@
       text-decoration: none;
       color: inherit;
       display: block;
-      max-width: 100%;
     }
     
     .archive-card:hover {
@@ -269,8 +268,6 @@
       object-position: center;
       background: #333;
       transition: transform 0.4s;
-      display: block;
-      max-width: 100%;
     }
     
     .featured-card .archive-img {
@@ -283,36 +280,27 @@
       border-bottom: 1px solid var(--border);
     }
     
-    /* Special rule for the interviews placeholder to show full image */
-    .interviews-placeholder .archive-img {
-      height: auto;
-      max-height: 400px;
-      object-fit: contain;
-      object-position: center;
-      background: var(--card-bg);
-    }
-    
     .archive-card:hover .archive-img {
       transform: scale(1.03);
     }
     
     .archive-body {
-      padding: 1.8rem;
+      padding: 2rem;                  /* increased padding for cleaner look */
     }
     
     .archive-category {
       display: inline-block;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--primary);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
     }
     
     .archive-title {
-      font-size: 1.55rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.65rem;
+      margin-bottom: 0.9rem;
       line-height: 1.3;
     }
     
@@ -323,7 +311,7 @@
     .archive-meta {
       font-size: 0.95rem;
       color: var(--text-muted);
-      margin-top: 1rem;
+      margin-top: 1.2rem;
     }
     
     footer {
@@ -339,65 +327,27 @@
       .hero { padding: 10rem 5% 12rem; }
       .hero h1 { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .content-grid { 
-        padding: 0 5%; 
-        gap: 2.2rem; 
+        gap: 2.8rem; 
       }
       .featured-card .archive-img { 
         max-height: 450px; 
-        object-position: center 78%;
-      }
-      .interviews-placeholder .archive-img {
-        max-height: 350px;
-      }
-      .nav-links-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.2rem;
-        flex-wrap: wrap;
-        margin-top: 0.6rem;
-        width: 100%;
-      }
-      .theme-toggle {
-        order: -1;
-      }
-      .nav-links {
-        display: flex !important;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem 1.5rem;
-        font-size: 0.9rem;
       }
     }
     
     @media (max-width: 480px) {
       .content-grid {
         padding: 0 4%;
+        gap: 2.4rem;
       }
       nav {
         padding: 0.9rem 4%;
       }
-      .archive-body { padding: 1.4rem; }
+      .archive-body { padding: 1.6rem; }
       .featured-card .archive-img { 
         max-height: 400px; 
-        object-position: center bottom 8%;
       }
-      .interviews-placeholder .archive-img {
-        max-height: 300px;
-      }
-      .nav-links-container {
-        gap: 0.8rem;
-      }
-      .nav-links {
-        gap: 0.8rem 1.2rem;
-        font-size: 0.85rem;
-      }
-      .logo {
-        font-size: clamp(1.6rem, 8vw, 2.2rem);
-      }
-      .section-title {
-        font-size: 2.4rem;
-        margin: 3rem auto 2rem;
+      .archive-title {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -434,7 +384,7 @@
 
         <!-- 1. NEWEST ARTICLE – TOP SPOT (featured) -->
         <a href="articles/planting-trees-food-highways.html" class="archive-card featured-card">
-          <img src="/IMG_0060.jpeg" alt="Edible landscaping along highways – trees, fruit, and food security" class="archive-img">
+          <img src="/IMG_0071.jpeg" alt="Edible landscaping along highways – trees, fruit, and food security" class="archive-img">
           <div class="archive-body">
             <div class="archive-category">INNOVATION</div>
             <h3 class="archive-title">Planting Trees & Food Along Highways: A Game-Changer for Food Security and Sustainability</h3>
