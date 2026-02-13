@@ -240,7 +240,7 @@
     
     .archive-img-wrapper {
       position: relative;
-      padding-top: 56.25%; /* 16:9 aspect ratio for consistency */
+      padding-top: 56.25%; /* 16:9 base aspect ratio */
       overflow: hidden;
       background: #333;
     }
@@ -251,17 +251,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center; /* Default to balanced center crop */
       transition: transform 0.4s;
     }
     
     .featured-card {
-      grid-column: 1 / -1; /* Full width on all sizes above mobile */
+      grid-column: 1 / -1; /* Full width */
     }
     
     .featured-card .archive-img-wrapper {
-      padding-top: 56.25%; /* Consistent aspect, or adjust to 75% for taller hero */
-      max-height: 520px; /* Optional cap */
+      padding-top: 60%; /* Slightly taller proportion for featured on wider screens */
+      max-height: 580px; /* Raised cap so more content is visible */
     }
     
     .archive-card:hover .archive-img {
@@ -337,10 +337,14 @@
       }
       .archive-grid {
         gap: 2.5rem;
-        grid-template-columns: repeat(2, 1fr); /* Force 2 cols for cleaner tablet look */
+        grid-template-columns: repeat(2, 1fr);
       }
       .featured-card .archive-img-wrapper {
-        padding-top: 50%; /* Slightly shorter hero on tablet for balance */
+        padding-top: 62.5%; /* Adjusted for iPad visibility */
+        max-height: 560px;
+      }
+      .featured-card .archive-img {
+        object-position: center; /* Ensure balanced crop on tablet */
       }
       .archive-body {
         padding: 1.6rem;
@@ -354,7 +358,7 @@
       main { padding-top: 11rem; }
       .page-title { font-size: clamp(2.8rem, 9vw, 4.8rem); }
       .page-header { padding-bottom: 3rem; }
-      .archive-img-wrapper { padding-top: 75%; } /* Taller on mobile for impact */
+      .archive-img-wrapper { padding-top: 75%; }
       .archive-grid { gap: 2.2rem; }
       .featured-card .archive-img-wrapper { 
         padding-top: 75%; 
@@ -391,7 +395,7 @@
       }
       .archive-body { padding: 1.4rem; }
       .featured-card .archive-img-wrapper { 
-        padding-top: 100%; /* Square-ish on very small screens */
+        padding-top: 100%;
       }
       .nav-links-container {
         gap: 0.8rem;
