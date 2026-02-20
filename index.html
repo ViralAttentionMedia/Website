@@ -322,16 +322,25 @@
       margin-top: 6rem;
     }
     
-    /* Tablet/iPad specific (768–1024px) */
+    /* Tablet/iPad specific (768–1024px) – IMPROVED FOR FULL SUBJECT VISIBILITY */
     @media (min-width: 768px) and (max-width: 1024px) {
       main { padding-top: 11rem; }
       .content-grid { 
-        gap: 2.8rem; 
+        gap: 3rem; 
         padding: 0 6%;
       }
       .featured-card .archive-img { 
-        max-height: 560px;
+        max-height: 640px;          /* Slightly taller featured image */
         object-position: center;
+      }
+      .archive-img {                /* 2nd and 3rd articles – show full subject cleanly */
+        height: 340px;              /* Taller cards = more visible content */
+        object-fit: contain;        /* Full image shown, no cropping of key elements */
+        object-position: center;
+        background: var(--card-bg); /* Nice fallback if image has different aspect ratio */
+      }
+      .archive-body {
+        padding: 2.2rem;            /* Extra breathing room around text */
       }
     }
     
@@ -346,7 +355,7 @@
       .featured-card .archive-img { 
         max-height: 450px; 
       }
-      /* Enhanced mobile image handling */
+      /* Enhanced mobile image handling – unchanged since you said it's perfect */
       .archive-img, .featured-card .archive-img {
         height: auto;
         max-height: 400px;
