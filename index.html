@@ -330,17 +330,17 @@
         padding: 0 6%;
       }
       .featured-card .archive-img { 
-        max-height: 640px;          /* Slightly taller featured image */
+        max-height: 640px;          
         object-position: center;
       }
-      .archive-img {                /* 2nd and 3rd articles – show full subject cleanly */
-        height: 340px;              /* Taller cards = more visible content */
-        object-fit: contain;        /* Full image shown, no cropping of key elements */
+      .archive-img {                
+        height: 340px;              
+        object-fit: contain;        
         object-position: center;
-        background: var(--card-bg); /* Nice fallback if image has different aspect ratio */
+        background: var(--card-bg); 
       }
       .archive-body {
-        padding: 2.2rem;            /* Extra breathing room around text */
+        padding: 2.2rem;            
       }
     }
     
@@ -355,7 +355,6 @@
       .featured-card .archive-img { 
         max-height: 450px; 
       }
-      /* Enhanced mobile image handling – unchanged since you said it's perfect */
       .archive-img, .featured-card .archive-img {
         height: auto;
         max-height: 400px;
@@ -424,9 +423,9 @@
       <h2 class="section-title">Featured Articles</h2>
       <div class="content-grid">
 
-        <!-- 1. NEWEST ARTICLE – TOP SPOT (featured) – UPDATED -->
+        <!-- 1. NEWEST ARTICLE – TOP SPOT (featured) -->
         <a href="articles/movie-theater-experience-ruined.html" class="archive-card featured-card">
-          <img src="/IMG_0191.jpeg" alt="Dark movie theater with glowing cell phone screens from audience members ruining the film, scattered popcorn, and empty seats highlighting distractions" class="archive-img">
+          <img src="/IMG_0191.jpeg" alt="Dark movie theater auditorium with glowing cell phone screens from audience members during a film, empty popcorn buckets scattered, illustrating distractions and poor experience" class="archive-img">
           <div class="archive-body">
             <div class="archive-category">RANT / EXPOSÉ</div>
             <h3 class="archive-title">Modern Movie Theater Experience Sucks: 30-Minute Previews, Phone Glows, $20+ Concessions – Why I'm Done Paying</h3>
@@ -434,23 +433,23 @@
           </div>
         </a>
 
-        <!-- 2. Previous (now second) -->
+        <!-- 2. College article (second position) -->
+        <a href="articles/college-cash-grab-bubble.html" class="archive-card">
+          <img src="/image13.jpg" alt="Overcrowded college campus with students buried in debt paperwork, luxury buildings, and rising tuition charts in background" class="archive-img">
+          <div class="archive-body">
+            <div class="archive-category">EXPOSÉ / RANT</div>
+            <h3 class="archive-title">College: The Ultimate Cash Grab Bubble About to Pop</h3>
+            <p class="archive-meta">February 20, 2026 • ~10 min read</p>
+          </div>
+        </a>
+
+        <!-- 3. Airline article (third position) -->
         <a href="articles/airline-baggage-fees-hypocrisy.html" class="archive-card">
           <img src="/IMG_0139.jpeg" alt="Frustrated traveler at airport baggage counter with overweight fee notice next to large passenger boarding" class="archive-img">
           <div class="archive-body">
             <div class="archive-category">RANT / EXPOSÉ</div>
             <h3 class="archive-title">Airline Bullshit Exposed: Why My 51-Pound Bag Costs $100 Extra While the 350-Pound Passenger Pays the Same Fare</h3>
             <p class="archive-meta">February 13, 2026 • ~8 min read</p>
-          </div>
-        </a>
-
-        <!-- 3. Next (previously second, now third) -->
-        <a href="articles/retractable-dog-leash-disaster.html" class="archive-card">
-          <img src="/IMG_0056.jpeg" alt="Frustrated owners and dogs tangled in retractable leash chaos" class="archive-img">
-          <div class="archive-body">
-            <div class="archive-category">RANT</div>
-            <h3 class="archive-title">Retractable Dog Leashes Are a Total Disaster: The Inventor Deserves a Punch in the Face</h3>
-            <p class="archive-meta">January 21, 2026 • ~7 min read</p>
           </div>
         </a>
 
